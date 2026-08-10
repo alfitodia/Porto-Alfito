@@ -497,3 +497,306 @@ if (bintangKiri && bintangKanan) {
 
     rotateBintang();
 }
+
+// ================= GITHUB ACTIVITY =================
+async function loadGithubActivity() {
+    const calendar = document.getElementById("github-calendar");
+    const total = document.getElementById("github-total");
+    const months = document.getElementById("github-months");
+
+    if (!calendar || !total || !months) {
+        return;
+    }
+
+    const username = "alfitodia";
+
+    try {
+        // ================= DATA TAHUN SAAT INI =================
+        const currentYear = new Date().getFullYear();
+
+        const response = await fetch(
+            `https://github-contributions-api.jogruber.de/v4/${username}?y=${currentYear}`
+        );
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        console.log(`GitHub Activity ${currentYear}:`, data);
+
+        if (data.error || !Array.isArray(data.contributions)) {
+            throw new Error(
+                data.error || "Format data tidak dikenali"
+            );
+        }
+
+        // ================= TOTAL KONTRIBUSI =================
+        let totalCount = 0;
+
+        if (data.total && typeof data.total === "object") {
+
+            // Cari total berdasarkan tahun saat ini
+            totalCount =
+                Number(data.total[currentYear]) ||
+                Object.values(data.total).reduce(
+                    (sum, val) => sum + (Number(val) || 0),
+                    0
+                );
+
+        } else if (Array.isArray(data.contributions)) {
+
+            totalCount = data.contributions.reduce(
+                (sum, day) => sum + (Number(day.count) || 0),
+                0
+            );
+        }
+
+        total.textContent =
+            Number(totalCount).toLocaleString("en-US");
+
+        // ================= SUSUN DATA HARI =================
+        const days = [...data.contributions].sort(
+            (a, b) =>
+                new Date(a.date) - new Date(b.date)
+        );
+
+        // ================= BUAT MINGGU =================
+        const weeks = [];
+        let currentWeek = [];
+
+        if (days.length > 0) {
+            const firstDate =
+                new Date(
+                    days[0].date + "T00:00:00"
+                );
+
+            const firstDow =
+                firstDate.getDay();
+
+            // Padding sebelum tanggal pertama
+            for (let i = 0; i < firstDow; i++) {
+                currentWeek.push(null);
+            }
+
+            days.forEach((day) => {
+
+                const date =
+                    new Date(
+                        day.date + "T00:00:00"
+                    );
+
+                const dow =
+                    date.getDay();
+
+                currentWeek.push(day);
+
+                // Sabtu = akhir minggu
+                if (dow === 6) {
+
+                    weeks.push(currentWeek);
+
+                    currentWeek = [];
+                }
+            });
+
+            if (currentWeek.length > 0) {
+
+                while (currentWeek.length < 7) {
+                    currentWeek.push(null);
+                }
+
+                weeks.push(currentWeek);
+            }
+        }
+
+        // ================= GRID =================
+        calendar.innerHTML = "";
+
+        weeks.forEach((week) => {
+
+            const column =
+                document.createElement("div");
+
+            column.className =
+                "flex flex-col gap-[4px] shrink-0";
+
+            week.forEach((day) => {
+
+                const cell =
+                    document.createElement("div");
+
+                cell.className =
+                   "w-[17px] h-[17px] rounded-[3px] shrink-0";
+
+                if (!day) {
+
+                    cell.classList.add(
+                        "bg-transparent"
+                    );
+
+                    column.appendChild(cell);
+
+                    return;
+                }
+
+                const level =
+                    Number(day.level) || 0;
+
+
+                if (level === 0) {
+
+                    cell.classList.add(
+                        "bg-[#006041]/5"
+                    );
+
+                } else if (level === 1) {
+
+                    cell.classList.add(
+                        "bg-[#006041]/20"
+                    );
+
+                } else if (level === 2) {
+
+                    cell.classList.add(
+                        "bg-[#006041]/40"
+                    );
+
+                } else if (level === 3) {
+
+                    cell.classList.add(
+                        "bg-[#006041]/65"
+                    );
+
+                } else {
+
+                    cell.classList.add(
+                        "bg-[#006041]"
+                    );
+                }
+
+                cell.title =
+                    `${day.count || 0} contributions on ${day.date}`;
+                column.appendChild(cell);
+            });
+            calendar.appendChild(column);
+        });
+
+        // ================= BULAN JAN - DES ===============
+        const monthNames = [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec"
+        ];
+
+        months.innerHTML = "";
+
+        const colWidth = 21;
+
+        months.style.display = "flex";
+        months.style.marginLeft = "3.3rem";
+        months.style.position = "relative";
+        months.style.height = "18px";
+
+        weeks.forEach((week, weekIndex) => {
+
+            const firstValidDay =
+                week.find(
+                    (day) => day !== null
+                );
+
+            if (!firstValidDay) {
+                return;
+            }
+
+            const date =
+                new Date(
+                    firstValidDay.date + "T00:00:00"
+                );
+
+            const month =
+                date.getMonth();
+
+            const previousWeek =
+                weekIndex > 0
+                    ? weeks[weekIndex - 1]
+                    : null;
+
+            let previousMonth = null;
+
+            if (previousWeek) {
+                const previousValidDay =
+                    previousWeek.find(
+                        (day) => day !== null
+                    );
+                if (previousValidDay) {
+
+                    previousMonth =
+                        new Date(
+                            previousValidDay.date +
+                            "T00:00:00"
+                        ).getMonth();
+                }
+            }
+
+            if (
+                weekIndex === 0 ||
+                month !== previousMonth
+            ) {
+                const span =
+                    document.createElement("span");
+
+                span.textContent =
+                    monthNames[month];
+
+                span.style.position =
+                    "absolute";
+
+                span.style.left =
+                    `${weekIndex * colWidth}px`;
+
+                span.style.width =
+                    `${colWidth * 4}px`;
+
+                span.style.textAlign =
+                    "left";
+
+                span.style.whiteSpace =
+                    "nowrap";
+
+                months.appendChild(span);
+            }
+        });
+
+        console.log(
+            `GitHub Activity ${currentYear} berhasil dimuat.`
+        );
+
+    } catch (error) {
+
+        console.error(
+            "GitHub Activity gagal dimuat:",
+            error
+        );
+
+        total.textContent = "—";
+
+        calendar.innerHTML = `
+            <p class="text-xs text-[#77716A]">
+                GitHub activity gagal dimuat.
+            </p>
+        `;
+    }
+}
+
+loadGithubActivity();
