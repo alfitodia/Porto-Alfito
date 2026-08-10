@@ -359,12 +359,92 @@
             z-10">
         </div>
     </section>
-   <!-- ================= CONTACT INFORMATION ================= -->
-    <section class="relative bg-white py-28 font-geist">
-        <div class="max-w-7xl mx-auto px-8 reveal">
+   <!-- ================= INVESTASI PORTOFOLIO ================= -->
+    <section class="relative bg-white pt-24 pb-16 font-geist overflow-hidden">
+    <div class="reveal">
+        <!-- ================= TITLE ================= -->
+        <div class="text-center mb-14">
+            <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#006041]">
+                Investment Portofolio
+            </h2>
+            <p class="mt-4 text-sm md:text-base text-black tracking-wide">
+                Ringkasan alokasi investasi yang saya miliki saat ini.
+            </p>
+        </div>
+        <!-- ================= PORTFOLIO CHART ================= -->
+        <div class="relative mx-auto w-full max-w-5xl h-90">
+            <!-- ================= DONUT ================= -->
+            <div
+                id="investment-donut"
+                class="absolute left-1/2 top-1/2
+                    -translate-x-1/2 -translate-y-1/2
+                    w-85 h-85">
+            </div>
+            <div class="absolute right-[6%] top-[45%] flex items-center">
+                <!-- Arrow / Line -->
+                <div></div>
+                <div
+                    class="w-11 h-11 rounded-full
+                        bg-black flex items-center justify-center
+                        shrink-0 overflow-hidden">
+                    <img
+                        src="./assets/img/Nvidia.jpg"
+                        alt="NVIDIA"
+                        class="w-full h-full object-contain">
+                </div>
+                <p class="ml-3 text-xl text-black whitespace-nowrap">
+                    Nvidia Corp
+                    <span class="ml-6 font-medium">57.9%</span>
+                </p>
+            </div>
+            <div class="absolute left-[7%] top-[12%] flex items-center">
+                <p class="mr-3 text-xl text-black whitespace-nowrap">
+                    <span class="mr-6 font-medium">15.8%</span>
+                    Ethereum
+                </p>
+                <div
+                    class="w-11 h-11 rounded-full
+                        bg-[#627EEA]
+                        flex items-center justify-center
+                        shrink-0 overflow-hidden">
+                    <img
+                        src="./assets/img/Ethereum.png"
+                        alt="Ethereum"
+                        class="w-full h-full object-contain">
+                </div>
+                <div></div>
+            </div>
+            <div class="absolute left-[7%] bottom-[12%] flex items-center">
+                <p class="mr-3 text-xl text-black whitespace-nowrap">
+                    <span class="mr-6 font-medium">26.3%</span>
+                    Solana
+                </p>
+                <div
+                    class="w-11 h-11 rounded-full
+                        border border-gray-300
+                        bg-white
+                        flex items-center justify-center
+                        overflow-hidden">
+                    <img
+                        src="./assets/img/Solana.jpg"
+                        alt="Solana"
+                        class="w-7 h-7 object-contain">
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ================= CONTACT INFORMATION ================= -->
+    <section class="relative bg-[#F6F2EB] py-28 font-geist">
+        <!-- Gradient Atas -->
+        <div
+            class="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-white to-transparent pointer-events-none">
+        </div>
+                <div class="max-w-7xl mx-auto px-8 reveal">
             <div class="grid lg:grid-cols-2 gap-12 items-stretch">
                 <!-- ================= MAP ================= -->
-                <div class="overflow-hidden h-130">
+                <div class="overflow-hidden h-130 rounded">
                     <iframe
                         src="https://www.google.com/maps?q=Jl.+Kodari+Mentaraman+116,+Kabupaten+Malang&output=embed"
                         class="w-full h-full"
@@ -373,12 +453,35 @@
                 </div>
                 <!-- ================= CONTACT ================= -->
                 <div class="flex flex-col h-130 font-geist">
-                    <h2 class="text-5xl font-bold text-[#006041] mb-4">
-                        Hubungi Saya
-                    </h2>
+                    <div class="relative mb-8">
+                        <!-- Glow Hijau -->
+                        <div class="absolute -top-10 left-2
+                                    w-32 h-32 rounded-full
+                                    bg-[#006041]/40
+                                    blur-3xl z-0">
+                        </div>
+                        <!-- Glow Gold -->
+                        <div class="absolute -top-6 left-38
+                                    w-28 h-28 rounded-full
+                                    bg-[#C89B3C]/40
+                                    blur-3xl z-0">
+                        </div>
+                        <!-- Decorative Image -->
+                        <img src="../assets/img/HubungiSaya.png"
+                            alt=""
+                            class="absolute -top-3 -left-8
+                                w-auto h-8
+                                opacity-20 z-1">
+                        <!-- Heading -->
+                        <h2 class="relative z-10
+                                text-5xl font-bold
+                                text-[#006041]">
+                            Hubungi Saya
+                        </h2>
+                    </div>
                     <div class="flex items-start gap-4 mb-5">
                         <div class="w-10 h-10 flex items-center justify-center">
-                            <img src="./assets/img/Lokasi Hitam.png"
+                            <img src="./assets/img/LokasiCoklat.png"
                                 class="w-7">
                         </div>
                         <div>
@@ -395,7 +498,7 @@
                     </div>
                     <div class="flex items-center gap-4 mb-6">
                         <div class="w-10 h-10 flex items-center justify-center">
-                            <img src="./assets/img/Wa Hitam.png"
+                            <img src="./assets/img/Wa Coklat.png"
                                 class="w-7">
                         </div>
                         <div>
@@ -420,8 +523,8 @@
                         w-full
                         resize-none
                         rounded-2xl
-                        border border-black
-                        bg-black/15
+                        border border-[#006041]
+                        bg-white/15
                         backdrop-blur-[20px]
                         text-black
                         placeholder:text-black
@@ -429,9 +532,7 @@
                         py-4
                         outline-none
                         shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_20px_10px_rgba(255,255,255,0.08)]
-                        transition-all
-                        focus:bg-black/20
-                        focus:border-black"></textarea>
+                        transition-all"></textarea>
                         <button
                             type="submit"
                             class="
@@ -444,8 +545,8 @@
                             justify-center
                             gap-4
                             rounded-2xl
-                            border border-black
-                            bg-black/15
+                            border border-[#006041]
+                            bg-white/15
                             backdrop-blur-[20px]
                             text-black
                             text-xl
@@ -454,9 +555,10 @@
                             shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_20px_10px_rgba(255,255,255,0.08)]
                             transition-all
                             duration-300
-                            hover:bg-black/25
+                            hover:bg-[#006041]
                             hover:shadow-[0_15px_40px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.15),inset_0_0_25px_10px_rgba(255,255,255,0.12)]
-                            hover:scale-[1.02]">
+                            hover:scale-[1.02]
+                            hover:text-white">
                             Kirim Pesan
                         </button>
                     </form>
@@ -465,13 +567,13 @@
         </div>
     </section>
     <!-- FOOTER -->
-    <footer class="bg-black text-white py-10 font-geist">
+    <footer class="bg-white text-black py-10 font-geist">
         <div class="max-w-7xl mx-auto px-14 py-6">
             <!-- Bagian Atas -->
             <div class="flex justify-between">
                 <!-- Logo -->
                 <div>
-                    <img src="./assets/img/Icon Kucing Putih.png"
+                    <img src="./assets/img/Icon Kucing Hitam.png"
                         class="w-12"
                         alt="Logo">
                 </div>
@@ -506,19 +608,19 @@
                             <a href="https://github.com/alfitodia?tab=repositories"
                                 class="flex items-center justify-between w-40 group">
                                 <span>Github</span>
-                                <img src="./assets/img/ExternalLinkWhite.png"
+                                <img src="./assets/img/ExternalLinkBlack.png"
                                     class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
                             <a href="https://www.instagram.com/alfito_dia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                                 class="flex items-center justify-between w-40 group">
                                 <span>Instagram</span>
-                                <img src="./assets/img/ExternalLinkWhite.png"
+                                <img src="./assets/img/ExternalLinkBlack.png"
                                     class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
                             <a href="https://www.tiktok.com/@alfito_dia?is_from_webapp=1&sender_device=pc"
                                 class="flex items-center justify-between w-40 group">
                                 <span>TikTok</span>
-                                <img src="./assets/img/ExternalLinkWhite.png"
+                                <img src="./assets/img/ExternalLinkBlack.png"
                                     class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
                         </div>
@@ -531,11 +633,11 @@
                     <p>
                         ©2026 Alfito Deanova Issac Alfarros
                     </p>
-                    <p class="text-white mt-1">
+                    <p class="text-black mt-1">
                         This website runs on the internet and your smile.
                     </p>
                 </div>
-                <p id="weather" class="text-white font-geist">
+                <p id="weather" class="text-black font-geist">
                     Loading weather...
                 </p>
             </div>

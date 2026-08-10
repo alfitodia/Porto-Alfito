@@ -648,31 +648,31 @@ async function loadGithubActivity() {
                 if (level === 0) {
 
                     cell.classList.add(
-                        "bg-[#006041]/5"
+                        "bg-[#8B5E3C]/5"
                     );
 
                 } else if (level === 1) {
 
                     cell.classList.add(
-                        "bg-[#006041]/20"
+                        "bg-[#8B5E3C]/20"
                     );
 
                 } else if (level === 2) {
 
                     cell.classList.add(
-                        "bg-[#006041]/40"
+                        "bg-[#8B5E3C]/40"
                     );
 
                 } else if (level === 3) {
 
                     cell.classList.add(
-                        "bg-[#006041]/65"
+                        "bg-[#8B5E3C]/65"
                     );
 
                 } else {
 
                     cell.classList.add(
-                        "bg-[#006041]"
+                        "bg-[#8B5E3C]"
                     );
                 }
 
@@ -800,3 +800,177 @@ async function loadGithubActivity() {
 }
 
 loadGithubActivity();
+
+// ================= INVESTMENT PORTFOLIO =================
+const investmentData = {
+    nvidia: {
+        name: "Nvidia Corp",
+        percentage: 57.9,
+        color: "#006041"
+    },
+    solana: {
+        name: "Solana",
+        percentage: 26.3,
+        color: "#8B5E3C"
+    },
+    ethereum: {
+        name: "Ethereum",
+        percentage: 15.8,
+        color: "#C89B3C"
+    }
+};
+
+
+// ================= DONUT =================
+function updateInvestmentDonut() {
+
+    const donut = document.getElementById("investment-donut");
+
+    if (!donut) return;
+
+    const size = 340;
+    const center = size / 2;
+
+    // Radius donut
+    const outerRadius = 170;
+    const innerRadius = 85;
+
+    let currentAngle = -90;
+
+    const svg = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "svg"
+    );
+
+    svg.setAttribute("viewBox", `0 0 ${size} ${size}`);
+    svg.setAttribute("class", "w-full h-full overflow-visible");
+
+    const segments = [];
+
+    // ================= CREATE SEGMENTS =================
+    Object.entries(investmentData).forEach(([key, asset]) => {
+        const angle = asset.percentage * 3.6;
+
+        const startAngle = currentAngle;
+        const endAngle = currentAngle + angle;
+
+        function polarToCartesian(
+            cx,
+            cy,
+            radius,
+            angleInDegrees
+        ) {
+            const angleInRadians =
+                angleInDegrees * Math.PI / 180;
+
+            return {
+                x: cx + radius * Math.cos(angleInRadians),
+                y: cy + radius * Math.sin(angleInRadians)
+            };
+        }
+        const outerStart = polarToCartesian(
+            center,
+            center,
+            outerRadius,
+            startAngle
+        );
+        const outerEnd = polarToCartesian(
+            center,
+            center,
+            outerRadius,
+            endAngle
+        );
+        const innerStart = polarToCartesian(
+            center,
+            center,
+            innerRadius,
+            endAngle
+        );
+        const innerEnd = polarToCartesian(
+            center,
+            center,
+            innerRadius,
+            startAngle
+        );
+        const largeArcFlag = angle > 180 ? 1 : 0;
+        const pathData = `
+            M ${outerStart.x} ${outerStart.y}
+
+            A ${outerRadius} ${outerRadius}
+            0 ${largeArcFlag} 1
+            ${outerEnd.x} ${outerEnd.y}
+
+            L ${innerStart.x} ${innerStart.y}
+
+            A ${innerRadius} ${innerRadius}
+            0 ${largeArcFlag} 0
+            ${innerEnd.x} ${innerEnd.y}
+
+            Z
+        `;
+        const path = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "path"
+        );
+
+        path.setAttribute("d", pathData);
+        path.setAttribute("fill", asset.color);
+
+        path.dataset.asset = key;
+        // ================= ANIMATION =================
+        path.style.transition = "fill 300ms ease, opacity 300ms ease";
+
+        segments.push(path);
+
+        svg.appendChild(path);
+
+        currentAngle = endAngle;
+    });
+
+    // ================= HOVER =================
+    segments.forEach((segment) => {
+        segment.addEventListener("mouseenter", () => {
+            segments.forEach((other) => {
+                if (other !== segment) {
+                    other.style.fill = "#F5F5F5";
+                    other.style.opacity = "1";
+
+                } else {
+                    other.style.fill =
+                        investmentData[
+                            other.dataset.asset
+                        ].color;
+                    other.style.opacity = "1";
+                }
+            });
+
+        });
+        segment.addEventListener("mouseleave", () => {
+            segments.forEach((other) => {
+                const asset =
+                    investmentData[
+                        other.dataset.asset
+                    ];
+                other.style.fill = asset.color;
+                other.style.opacity = "1";
+            });
+        });
+    });
+
+    // ================= CENTER HOLE =================
+    const hole = document.createElementNS(
+        "http://www.w3.org/2000/svg",
+        "circle"
+    );
+
+    hole.setAttribute("cx", center);
+    hole.setAttribute("cy", center);
+    hole.setAttribute("r", innerRadius);
+    hole.setAttribute("fill", "white");
+
+    svg.appendChild(hole);
+    
+    donut.appendChild(svg);
+}
+
+updateInvestmentDonut();
