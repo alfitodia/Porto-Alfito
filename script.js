@@ -974,3 +974,32 @@ function updateInvestmentDonut() {
 }
 
 updateInvestmentDonut();
+
+// ================= LIQUID CORNER ANIMATION =================
+
+const liquidElements = document.querySelectorAll(".liquid-float");
+
+liquidElements.forEach((el, index) => {
+
+    const duration = 7000 + index * 700;
+    const startTime = performance.now();
+
+    function animateLiquid(time) {
+
+        const progress =
+            ((time - startTime) % duration) / duration;
+
+        const angle = progress * Math.PI * 2;
+
+        const x = Math.sin(angle) * 4;
+        const y = Math.cos(angle) * 4;
+        const rotate = Math.sin(angle) * 0.6;
+
+        el.style.transform =
+            `translate(${x}px, ${y}px) rotate(${rotate}deg)`;
+
+        requestAnimationFrame(animateLiquid);
+    }
+
+    requestAnimationFrame(animateLiquid);
+});

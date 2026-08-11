@@ -100,6 +100,51 @@
     </nav>
     <!-- HERO CONTACT -->
     <section class="relative h-screen bg-[#F6F2EB] overflow-hidden flex items-center justify-center font-geist">
+        <!-- KIRI ATAS -->
+        <div class="absolute top-0 left-0 w-80 md:w-107.5 h-80 md:h-107.5 overflow-hidden pointer-events-none z-0">
+            <img
+                src="./assets/img/PKA.png"
+                alt=""
+                class="liquid-float absolute
+                    -top-5 -left-5
+                    w-80 md:w-107.5
+                    select-none
+                    opacity-70">
+        </div>
+        <!-- KANAN ATAS -->
+        <div class="absolute top-0 right-0 w-80 md:w-107.5 h-80 md:h-107.5 overflow-hidden pointer-events-none z-0">
+            <img
+                src="./assets/img/PIA.png"
+                alt=""
+                class="liquid-float absolute
+                    -top-5 -right-5
+                    w-80 md:w-107.5
+                    select-none
+                    opacity-70">
+        </div>
+        <!-- KIRI BAWAH -->
+        <div class="absolute bottom-0 left-0 w-80 md:w-107.5 h-80 md:h-107.5 overflow-hidden pointer-events-none z-0">
+            <img
+                src="./assets/img/PKB.png"
+                alt=""
+                class="liquid-float absolute
+                    -bottom-5 -left-5
+                    w-80 md:w-107.5
+                    select-none
+                    opacity-70">
+        </div>
+        <!-- KANAN BAWAH -->
+        <div class="absolute bottom-0 right-0 w-80 md:w-107.5 h-80 md:h-107.5 overflow-hidden pointer-events-none z-0">
+            <img
+                src="./assets/img/PIB.png"
+                alt=""
+                class="liquid-float absolute
+                    -bottom-5 -right-5
+                    w-80 md:w-107.5
+                    select-none
+                    opacity-70">
+        </div>
+        <!-- ================= GITHUB ================= -->
         <div class="absolute left-1/2 -translate-x-1/2 top-24">
             <div
                 class="
@@ -117,7 +162,7 @@
                 items-center
                 justify-center
                 text-black
-                ">
+                shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
                 <img src="assets/img/GithbubIcon Coklat.png" class="w-12">
                 <h3 class="font-bold text-2xl">
                     GitHub
@@ -164,7 +209,8 @@
                 flex-col
                 items-center
                 justify-center
-                text-black">
+                text-black
+                shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
                 <img src="assets/img/Instagram Coklat.png" class="w-12">
                 <h3 class="font-bold text-2xl text-black">
                     Instagram
@@ -211,7 +257,7 @@
                 items-center
                 justify-center
                 text-black
-                ">
+                shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
                 <img src="assets/img/Tiktok Coklat.png" class="w-12">
                 <h3 class="font-bold text-2xl text-black">
                     TikTok
@@ -258,7 +304,7 @@
                 items-center
                 justify-center
                 text-black
-                ">
+                shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
                 <img src="assets/img/Wa Coklat.png" class="w-12">
                 <h3 class="font-bold text-2xl text-black">
                     Whatsapp
@@ -305,7 +351,7 @@
                 items-center
                 justify-center
                 text-black
-                ">
+                shadow-[0_6px_20px_rgba(0,0,0,0.08)]">
                 <img src="assets/img/Gmail Coklat.png" class="w-12">
                 <h3 class="font-bold text-2xl">
                     Gmail
@@ -337,10 +383,9 @@
         <div class="absolute bottom-0 left-1/2 -translate-x-1/2 z-0">
             <!-- Lingkaran -->
             <img
-                src=""
-                alt="Lingkaran"
-                class="w-110 select-none pointer-events-none">
-
+                src="./assets/img/LiquidTengah.png"
+                alt="Liquid"
+                class="liquid-float w-170 select-none pointer-events-none opacity-30">
             <!-- Orang -->
             <img
                 src="./assets/img/Abang.png"
@@ -348,7 +393,6 @@
                 class="absolute bottom-0 left-1/2 -translate-x-1/2
                     w-105 select-none pointer-events-none">
         </div>
-
         <!-- Gradient bawah -->
         <div class="absolute bottom-0 left-0 w-full h-48
             bg-linear-to-b
@@ -359,81 +403,81 @@
             z-10">
         </div>
     </section>
-   <!-- ================= INVESTASI PORTOFOLIO ================= -->
+    <!-- ================= INVESTASI PORTOFOLIO ================= -->
     <section class="relative bg-white pt-24 pb-16 font-geist overflow-hidden">
-    <div class="reveal">
-        <!-- ================= TITLE ================= -->
-        <div class="text-center mb-14">
-            <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#006041]">
-                Investment Portofolio
-            </h2>
-            <p class="mt-4 text-sm md:text-base text-black tracking-wide">
-                Ringkasan alokasi investasi yang saya miliki saat ini.
-            </p>
+        <div class="reveal">
+            <!-- ================= TITLE ================= -->
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-5xl font-semibold tracking-tight text-[#006041]">
+                    Investment Portofolio
+                </h2>
+                <p class="mt-4 text-sm md:text-base text-black tracking-wide">
+                    Ringkasan alokasi investasi yang saya miliki saat ini.
+                </p>
+            </div>
+            <!-- ================= PORTFOLIO ================= -->
+            <div class="mx-auto w-full max-w-5xl px-6">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-14 md:gap-20">
+                    <!-- ================= DONUT ================= -->
+                    <div class="shrink-0">
+                        <div id="investment-donut" class="w-72 h-72 md:w-80 md:h-80">
+                        </div>
+                    </div>
+                    <!-- ================= INVESTMENT LIST ================= -->
+                    <div class="flex flex-col gap-5 md:gap-6 w-full">
+
+                        <!-- ================= NVIDIA ================= -->
+                        <div class="flex items-center w-full">
+                            <div class="w-13 h-13 rounded-full bg-black flex items-center justify-center shrink-0 overflow-hidden">
+                                <img src="./assets/img/Nvidia.jpg" alt="NVIDIA" class="w-full h-full object-cover">
+                            </div>
+                            <p class="ml-5 text-lg md:text-xl text-black whitespace-nowrap">
+                                Nvidia Corp
+                            </p>
+                            <div class="flex-1"></div>
+                            <div class="flex items-center gap-7">
+                                <p class="text-lg md:text-xl font-medium text-black w-16 text-right">
+                                    57.9%
+                                </p>
+                                <div class="w-7 h-7 bg-[#006041] shrink-0"></div>
+                            </div>
+                        </div>
+                        <!-- ================= ETHEREUM ================= -->
+                        <div class="flex items-center w-full">
+                            <div class="w-13 h-13 rounded-full bg-[#627EEA] flex items-center justify-center shrink-0 overflow-hidden">
+                                <img src="./assets/img/Ethereum.png" alt="Ethereum" class="w-full h-full object-contain">
+                            </div>
+                            <p class="ml-5 text-lg md:text-xl text-black whitespace-nowrap">
+                                Ethereum
+                            </p>
+                            <div class="flex-1"></div>
+                            <div class="flex items-center gap-7">
+                                <p class="text-lg md:text-xl font-medium text-black w-16 text-right">
+                                    15.8%
+                                </p>
+                                <div class="w-7 h-7 bg-[#8B5E3C] shrink-0"></div>
+                            </div>
+                        </div>
+                        <!-- ================= SOLANA ================= -->
+                        <div class="flex items-center w-full">
+                            <div class="w-13 h-13 rounded-full bg-white border border-gray-200 flex items-center justify-center shrink-0 overflow-hidden">
+                                <img src="./assets/img/Solana.jpg" alt="Solana" class="w-9 h-9 object-contain">
+                            </div>
+                            <p class="ml-5 text-lg md:text-xl text-black whitespace-nowrap">
+                                Solana
+                            </p>
+                            <div class="flex-1"></div>
+                            <div class="flex items-center gap-7">
+                                <p class="text-lg md:text-xl font-medium text-black w-16 text-right">
+                                    26.3%
+                                </p>
+                                <div class="w-7 h-7 bg-[#C89B3C] shrink-0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- ================= PORTFOLIO CHART ================= -->
-        <div class="relative mx-auto w-full max-w-5xl h-90">
-            <!-- ================= DONUT ================= -->
-            <div
-                id="investment-donut"
-                class="absolute left-1/2 top-1/2
-                    -translate-x-1/2 -translate-y-1/2
-                    w-85 h-85">
-            </div>
-            <div class="absolute right-[6%] top-[45%] flex items-center">
-                <!-- Arrow / Line -->
-                <div></div>
-                <div
-                    class="w-11 h-11 rounded-full
-                        bg-black flex items-center justify-center
-                        shrink-0 overflow-hidden">
-                    <img
-                        src="./assets/img/Nvidia.jpg"
-                        alt="NVIDIA"
-                        class="w-full h-full object-contain">
-                </div>
-                <p class="ml-3 text-xl text-black whitespace-nowrap">
-                    Nvidia Corp
-                    <span class="ml-6 font-medium">57.9%</span>
-                </p>
-            </div>
-            <div class="absolute left-[7%] top-[12%] flex items-center">
-                <p class="mr-3 text-xl text-black whitespace-nowrap">
-                    <span class="mr-6 font-medium">15.8%</span>
-                    Ethereum
-                </p>
-                <div
-                    class="w-11 h-11 rounded-full
-                        bg-[#627EEA]
-                        flex items-center justify-center
-                        shrink-0 overflow-hidden">
-                    <img
-                        src="./assets/img/Ethereum.png"
-                        alt="Ethereum"
-                        class="w-full h-full object-contain">
-                </div>
-                <div></div>
-            </div>
-            <div class="absolute left-[7%] bottom-[12%] flex items-center">
-                <p class="mr-3 text-xl text-black whitespace-nowrap">
-                    <span class="mr-6 font-medium">26.3%</span>
-                    Solana
-                </p>
-                <div
-                    class="w-11 h-11 rounded-full
-                        border border-gray-300
-                        bg-white
-                        flex items-center justify-center
-                        overflow-hidden">
-                    <img
-                        src="./assets/img/Solana.jpg"
-                        alt="Solana"
-                        class="w-7 h-7 object-contain">
-                </div>
-                <div></div>
-            </div>
-        </div>
-    </div>
     </section>
     <!-- ================= CONTACT INFORMATION ================= -->
     <section class="relative bg-[#F6F2EB] py-28 font-geist">
