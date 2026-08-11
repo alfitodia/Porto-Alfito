@@ -177,7 +177,7 @@ if (
     achievementContent.style.pointerEvents = "none";
 
     const activeClass = [
-        "bg-black/25",
+        "bg-black/5",
         "border",
         "border-black/20",
         "backdrop-blur-[20px]"
