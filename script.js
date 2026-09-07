@@ -63,8 +63,7 @@ setInterval(loadWeather, 600000);
 const texts = [
     "Frontend Developer",
     "Video Editor/3D Designer",
-    "Mathematics Student",
-    "Entrepreneur/Business Owner",
+    "Mathematics Bachelor",
     "Internet of Things Developer",
     "Investor"
 ];
@@ -1002,4 +1001,192 @@ liquidElements.forEach((el, index) => {
     }
 
     requestAnimationFrame(animateLiquid);
+});
+
+// ================= CERTIFICATE GALLERY MODAL =================
+const certificateGallery = {
+    1: {
+        images: [
+            "assets/img/Sertif Rekan.png",
+            "assets/img/TestingAlat.jpeg",
+            "assets/img/Rekan 3.png"
+        ]
+    },
+
+    2: {
+        images: [
+            "assets/img/SertifKPP.jpg.jpeg",
+            "assets/img/KPP 2.png",
+            "assets/img/KPP 3.png"
+        ]
+    },
+
+    3: {
+        images: [
+            "assets/img/SertifStand.png",
+            "assets/img/Stand 2.png",
+            "assets/img/Stand 3.png"
+        ]
+    },
+
+    4: {
+        images: [
+            "assets/img/Amli.png",
+            "assets/img/Amli 2.png",
+            "assets/img/Amli 3.png"
+        ]
+    },
+
+    5: {
+        images: [
+            "assets/img/SertifJuri.jpg.jpeg",
+            "assets/img/Juri 2.png",
+            "assets/img/Juri 3.png"
+        ]
+    },
+
+    6: {
+        images: [
+            "assets/img/SertifIDE3.jpeg",
+            "assets/img/IDE 2.png",
+            "assets/img/IDE 3.png"
+        ]
+    }
+
+};
+
+// ================= ELEMENT MODAL =================
+const certificateModal =
+    document.getElementById("certificateModal");
+
+const certificateBackdrop =
+    document.getElementById("certificateBackdrop");
+
+const closeCertificateModal =
+    document.getElementById("closeCertificateModal");
+
+const certificateMainImage =
+    document.getElementById("certificateMainImage");
+
+const certificateThumbnails =
+    document.getElementById("certificateThumbnails");
+
+const viewCertificateButtons =
+    document.querySelectorAll(".view-certificate");
+
+// ================= BUKA MODAL =================
+viewCertificateButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const certificateId =
+            button.dataset.certificate;
+        const certificate =
+            certificateGallery[certificateId];
+
+        if (!certificate) return;
+
+        certificateMainImage.src =
+            certificate.images[0];
+
+        certificateThumbnails.innerHTML = "";
+
+        certificate.images.forEach((image, index) => {
+            const thumbnail =
+                document.createElement("button");
+
+            thumbnail.type = "button";
+
+            thumbnail.className = `
+                w-20 h-20
+                md:w-24 md:h-24
+                flex-shrink-0
+                rounded-lg
+                overflow-hidden
+                border-2
+                border-white/70
+                bg-white
+                hover:scale-105
+                transition-all
+                duration-300
+            `;
+            thumbnail.innerHTML = `
+                <img
+                    src="${image}"
+                    class="w-full h-full object-cover"
+                    alt="Certificate ${index + 1}">
+            `;
+
+            thumbnail.addEventListener("click", () => {
+                certificateMainImage.src = image;
+
+                document
+                    .querySelectorAll(
+                        "#certificateThumbnails button"
+                    )
+                    .forEach(btn => {
+                        btn.classList.remove(
+                            "border-[#006041]",
+                            "scale-105"
+                        );
+                        btn.classList.add(
+                            "border-white/70"
+                        );
+                    });
+                thumbnail.classList.remove(
+                    "border-white/70"
+                );
+                thumbnail.classList.add(
+                    "border-[#006041]",
+                    "scale-105"
+                );
+            });
+
+            if (index === 0) {
+                thumbnail.classList.remove(
+                    "border-white/70"
+                );
+                thumbnail.classList.add(
+                    "border-[#006041]",
+                    "scale-105"
+                );
+            }
+            certificateThumbnails.appendChild(
+                thumbnail
+            );
+        });
+
+        certificateModal.classList.remove("hidden");
+
+        certificateModal.classList.add("flex");
+
+        document.body.classList.add(
+            "overflow-hidden"
+        );
+    });
+
+});
+
+function closeCertificateGallery() {
+    certificateModal.classList.add("hidden");
+    certificateModal.classList.remove("flex");
+
+    document.body.classList.remove(
+        "overflow-hidden"
+    );
+}
+
+closeCertificateModal.addEventListener(
+    "click",
+    closeCertificateGallery
+);
+
+certificateBackdrop.addEventListener(
+    "click",
+    closeCertificateGallery
+);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeCertificateGallery();
+
+    }
 });
