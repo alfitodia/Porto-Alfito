@@ -1,148 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <title>Preloading</title>
-    <link
-        rel="stylesheet"
-        href="./src/output.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#006041">
+
+    <title>Memuat Halaman — Alfito Deanova</title>
+    <meta name="description" content="Menyiapkan halaman portfolio Alfito Deanova Issac Alfarros.">
+
+    <!-- Preloader bersifat sementara — jangan diindeks agar tidak bentrok dengan Home -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://alfitodia.github.io/portfolio/Home.html">
+
+    <!-- Hint: prefetch halaman tujuan supaya transisi langsung -->
+    <link rel="prefetch" href="./Home.html" as="document">
+    <link rel="preconnect" href="https://api.github.com" crossorigin>
+
+    <!-- Hint: gambar latar preloader sebagai LCP -->
+    <link rel="preload" as="image" href="./assets/img/Awan Kiri.png" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/img/Awan Kanan.png" fetchpriority="high">
+
+    <link rel="icon" type="image/png" href="./public/img/logo.png">
+    <link rel="stylesheet" href="./src/output.css">
+
+    <!-- Fallback: bila JavaScript tidak aktif, langsung ke Home -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./Home.html">
+    </noscript>
+
+    <!-- Preloader-specific: reduced-motion + progress transition -->
+    <style>
+        #loading-progress {
+            transition: width 120ms linear;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #loading-progress {
+                transition: none !important;
+            }
+            /* Hindari animasi apa pun (mis. kupu-kupu melayang via class animate-*) */
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="m-0 p-0">
-    <!-- ================= PRELOADER ================= -->
-    <section
-        id="welcome"
-        class="
-            relative
-            flex
-            h-screen
-            w-full
-            items-center
-            justify-center
-            overflow-hidden
-            bg-[#F6F2EB]
-        ">
+    <!-- Fallback aksesibilitas jika JS mati tapi <noscript> di head terlewat -->
+    <noscript>
+        <p style="text-align:center;padding:1rem;font-family:sans-serif;">
+            <a href="./Home.html">Lanjut ke Home →</a>
+        </p>
+    </noscript>
+
+    <main id="welcome"
+        aria-label="Memuat halaman portfolio"
+        class="relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#F6F2EB]">
+
+        <!-- Dekorasi: aria-hidden karena murni visual -->
         <img
             src="./assets/img/Awan Kiri.png"
             alt=""
-            class="
-                pointer-events-none
-                absolute
-                left-0
-                top-[7%]
-                w-55
-                select-none
-            ">
+            aria-hidden="true"
+            width="220" height="120"
+            decoding="async"
+            fetchpriority="high"
+            class="pointer-events-none absolute left-0 top-[7%] w-55 select-none">
         <img
             src="./assets/img/Awan Kanan.png"
             alt=""
-            class="
-                pointer-events-none
-                absolute
-                right-0
-                top-[7%]
-                w-55
-                select-none
-            ">
+            aria-hidden="true"
+            width="220" height="120"
+            decoding="async"
+            fetchpriority="high"
+            class="pointer-events-none absolute right-0 top-[7%] w-55 select-none">
         <img
             src="./assets/img/Rumput Kiri.png"
             alt=""
-            class="
-                pointer-events-none
-                absolute
-                bottom-0
-                left-0
-                w-45
-                select-none
-            "
-        >
+            aria-hidden="true"
+            width="180" height="140"
+            decoding="async"
+            class="pointer-events-none absolute bottom-0 left-0 w-45 select-none">
         <img
             src="./assets/img/Rumput Kanan.png"
             alt=""
-            class="
-                pointer-events-none
-                absolute
-                bottom-0
-                right-0
-                w-45
-                select-none
-            ">
-        <div
-            class="
-                relative
-                z-10
-                flex
-                flex-col
-                items-center
-            ">
+            aria-hidden="true"
+            width="180" height="140"
+            decoding="async"
+            class="pointer-events-none absolute bottom-0 right-0 w-45 select-none">
+
+        <div class="relative z-10 flex flex-col items-center">
             <div class="relative">
                 <img
                     src="./assets/img/Kupu Kupu.png"
                     alt=""
-                    class="
-                        pointer-events-none
-                        absolute
-                        -left-8
-                        top-1
-                        z-10
-                        w-15
-                        select-none
-                    ">
-                <h1
-                    class="
-                        font-flatlion
-                        text-[200px]
-                        leading-none
-                        tracking-wide
-                        text-[#00604A]
-                    ">
+                    aria-hidden="true"
+                    width="60" height="60"
+                    decoding="async"
+                    class="pointer-events-none absolute -left-8 top-1 z-10 w-15 select-none">
+                <h1 class="font-flatlion text-[200px] leading-none tracking-wide text-[#00604A]">
                     Welcome
                 </h1>
             </div>
-            <div
-                class="
-                    mt-7
-                    w-63.75
-                ">
+
+            <div class="mt-7 w-63.75">
                 <div
-                    class="
-                        relative
-                        h-1
-                        w-full
-                        overflow-hidden
-                        rounded-full
-                        bg-[#8C6345]
-                    ">
+                    id="loading-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    aria-label="Progres pemuatan halaman"
+                    class="relative h-1 w-full overflow-hidden rounded-full bg-[#8C6345]">
                     <div
                         id="loading-progress"
-                        class="
-                            h-full
-                            w-0
-                            rounded-full
-                            bg-[#00604A]
-                        "
-                    ></div>
+                        class="h-full w-0 rounded-full bg-[#00604A]"></div>
                 </div>
                 <p
                     id="loading-number"
-                    class="
-                        mt-2
-                        text-center
-                        font-geist
-                        text-[13px]
-                        font-semibold
-                        tracking-wide
-                        text-[#00604A]
-                    ">
+                    aria-hidden="true"
+                    class="mt-2 text-center font-geist text-[13px] font-semibold tracking-wide text-[#00604A]">
                     0%
                 </p>
             </div>
         </div>
-    </section>
-    <script src="./Preloader.js"></script>
+    </main>
+
+    <script src="./Preloader.js" defer></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#006041">
+
+    <title>Memuat Halaman — Alfito Deanova</title>
+    <meta name="description" content="Menyiapkan halaman portfolio Alfito Deanova Issac Alfarros.">
+
+    <!-- Preloader bersifat sementara — jangan diindeks agar tidak bentrok dengan Home -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://alfitodia.github.io/portfolio/Home.html">
+
+    <!-- Hint: prefetch halaman tujuan supaya transisi langsung -->
+    <link rel="prefetch" href="./Home.html" as="document">
+    <link rel="preconnect" href="https://api.github.com" crossorigin>
+
+    <!-- Hint: gambar latar preloader sebagai LCP -->
+    <link rel="preload" as="image" href="./assets/img/Awan Kiri.png" fetchpriority="high">
+    <link rel="preload" as="image" href="./assets/img/Awan Kanan.png" fetchpriority="high">
+
+    <link rel="icon" type="image/png" href="./public/img/logo.png">
+    <link rel="stylesheet" href="./src/output.css">
+
+    <!-- Fallback: bila JavaScript tidak aktif, langsung ke Home -->
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./Home.html">
+    </noscript>
+
+    <!-- Preloader-specific: reduced-motion + progress transition -->
+    <style>
+        #loading-progress {
+            transition: width 120ms linear;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            #loading-progress {
+                transition: none !important;
+            }
+            /* Hindari animasi apa pun (mis. kupu-kupu melayang via class animate-*) */
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="m-0 p-0">
+    <!-- Fallback aksesibilitas jika JS mati tapi <noscript> di head terlewat -->
+    <noscript>
+        <p style="text-align:center;padding:1rem;font-family:sans-serif;">
+            <a href="./Home.html">Lanjut ke Home →</a>
+        </p>
+    </noscript>
+
+    <main id="welcome"
+        aria-label="Memuat halaman portfolio"
+        class="relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#F6F2EB]">
+
+        <!-- Dekorasi: aria-hidden karena murni visual -->
+        <img
+            src="./assets/img/Awan Kiri.png"
+            alt=""
+            aria-hidden="true"
+            width="220" height="120"
+            decoding="async"
+            fetchpriority="high"
+            class="pointer-events-none absolute left-0 top-[7%] w-55 select-none">
+        <img
+            src="./assets/img/Awan Kanan.png"
+            alt=""
+            aria-hidden="true"
+            width="220" height="120"
+            decoding="async"
+            fetchpriority="high"
+            class="pointer-events-none absolute right-0 top-[7%] w-55 select-none">
+        <img
+            src="./assets/img/Rumput Kiri.png"
+            alt=""
+            aria-hidden="true"
+            width="180" height="140"
+            decoding="async"
+            class="pointer-events-none absolute bottom-0 left-0 w-45 select-none">
+        <img
+            src="./assets/img/Rumput Kanan.png"
+            alt=""
+            aria-hidden="true"
+            width="180" height="140"
+            decoding="async"
+            class="pointer-events-none absolute bottom-0 right-0 w-45 select-none">
+
+        <div class="relative z-10 flex flex-col items-center">
+            <div class="relative">
+                <img
+                    src="./assets/img/Kupu Kupu.png"
+                    alt=""
+                    aria-hidden="true"
+                    width="60" height="60"
+                    decoding="async"
+                    class="pointer-events-none absolute -left-8 top-1 z-10 w-15 select-none">
+                <h1 class="font-flatlion text-[200px] leading-none tracking-wide text-[#00604A]">
+                    Welcome
+                </h1>
+            </div>
+
+            <div class="mt-7 w-63.75">
+                <div
+                    id="loading-bar"
+                    role="progressbar"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                    aria-label="Progres pemuatan halaman"
+                    class="relative h-1 w-full overflow-hidden rounded-full bg-[#8C6345]">
+                    <div
+                        id="loading-progress"
+                        class="h-full w-0 rounded-full bg-[#00604A]"></div>
+                </div>
+                <p
+                    id="loading-number"
+                    aria-hidden="true"
+                    class="mt-2 text-center font-geist text-[13px] font-semibold tracking-wide text-[#00604A]">
+                    0%
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="./Preloader.js" defer></script>
 </body>
 </html>

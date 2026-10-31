@@ -1,21 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <meta name="theme-color" content="#006041">
+
+    <title>Alfito Deanova — Portfolio &amp; Creative Developer</title>
+    <meta name="description" content="Portfolio pribadi Alfito Deanova Issac Alfarros — lulusan S1 Matematika Universitas Negeri Malang dengan keahlian web development, IoT, analisis data, editing video, dan desain grafis.">
+    <link rel="canonical" href="https://alfitodia.github.io/portfolio/Home.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Alfito Deanova — Portfolio & Creative Developer">
+    <meta property="og:description" content="Portfolio pribadi Alfito Deanova — Matematika Komputasi UM. Web, IoT, Data, Video, Design.">
+    <meta property="og:url" content="https://alfitodia.github.io/portfolio/Home.html">
+    <meta property="og:image" content="https://alfitodia.github.io/portfolio/assets/img/Alfito.png">
+    <meta property="og:locale" content="id_ID">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alfito Deanova — Portfolio & Creative Developer">
+    <meta name="twitter:description" content="Portfolio pribadi Alfito Deanova — Web, IoT, Data, Video, Design.">
+    <meta name="twitter:image" content="https://alfitodia.github.io/portfolio/assets/img/Alfito.png">
+
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="preconnect" href="https://api.github.com" crossorigin>
+    <link rel="preload" as="image" href="./assets/img/Alfito.png" fetchpriority="high">
+    <link rel="icon" type="image/png" href="./public/img/logo.png">
     <link href="./src/output.css" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Alfito Deanova Issac Alfarros",
+      "url": "https://alfitodia.github.io/portfolio/Home.html",
+      "image": "https://alfitodia.github.io/portfolio/assets/img/Alfito.png",
+      "jobTitle": "Fullstack Developer & Creative Designer",
+      "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universitas Negeri Malang" },
+      "sameAs": [
+        "https://github.com/alfitodia",
+        "https://www.instagram.com/alfito_dia/",
+        "https://www.tiktok.com/@alfito_dia",
+        "https://www.youtube.com/@alfitodia298"
+      ]
+    }
+    </script>
 </head>
 <body class="text-white overflow-x-hidden">
-    <!-- Navbar -->
-    <nav class="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-full px-3 sm:px-8">
+    <nav aria-label="Navigasi utama" class="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-full px-3 sm:px-8">
         <div class="max-w-7xl mx-auto flex justify-between items-center
             py-2 sm:py-3 px-3 sm:px-8 relative overflow-hidden rounded-full
             border border-[#006041] bg-black/15 backdrop-blur-[20px]">
             <div class="text-xl font-bold"></div>
             <ul class="flex gap-3 sm:gap-6 lg:gap-10 text-[10px] sm:text-xs lg:text-sm uppercase tracking-wider sm:tracking-widest font-geist font-bold text-[#006041]">
                 <li>
-                    <a href="./Home.html" class="relative inline-block pb-2
+                    <a href="./Home.html" aria-current="page" class="relative inline-block pb-2
                         after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5
                         after:bg-[#006041] after:scale-x-100 after:origin-left">Home</a>
                 </li>
@@ -35,413 +73,414 @@
                         after:bg-[#006041] after:origin-left after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Contact</a>
                 </li>
             </ul>
-            <img src="./public/img/logo.png" class="w-6 sm:w-8">
+            <img src="./public/img/logo.png" width="24" height="24" class="w-6 sm:w-8">
         </div>
     </nav>
 
-    <!-- Landing -->
-    <section id="landing" class="relative bg-[#F6F2EB] pt-32 sm:pt-40 pb-44 sm:pb-65 font-geist overflow-hidden">
-        <div class="absolute top-2 -left-20 w-44 h-44 rounded-full bg-[#C89B3C] blur-3xl opacity-70 z-0"></div>
-        <div class="absolute bottom-12 -right-20 w-44 h-44 rounded-full bg-[#C89B3C] blur-3xl opacity-70 z-0"></div>
-        <div class="relative z-20 max-w-6xl mx-auto w-full px-5 sm:px-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-0">
-                <div class="flex flex-col items-center lg:items-start">
-                    <h1 class="text-[clamp(64px,15vw,200px)] leading-none text-[#006041] font-flatlion text-center lg:text-left">
-                        Hello!
-                    </h1>
-                    <h2 class="text-lg sm:text-2xl lg:text-[28px] text-[#8B5E3C] font-geist text-center lg:text-left mt-2">
-                        Alfito Deanova Issac Alfarros
-                    </h2>
-                    <h3 class="text-base sm:text-xl lg:text-[22px] font-semibold text-[#8B5E3C] mt-1 font-geist text-center lg:text-left">
-                        <span id="typing-text"></span>
-                        <span class="animate-pulse">|</span>
-                    </h3>
-                    <div class="w-full max-w-[300px] h-0.5 bg-[#8B5E3C] mt-2 mb-6"></div>
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
-                        <a href="https://wa.me/qr/C6KCP74A72ABM1" class="transition hover:scale-110 duration-300">
-                            <img src="./assets/img/Wa Coklat.png" alt="WhatsApp" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
-                        </a>
-                        <a href="mailto:kabmalim@gmail.com" class="transition hover:scale-110 duration-300">
-                            <img src="./assets/img/Gmail Coklat.png" alt="Email" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
-                        </a>
-                        <a href="https://github.com/alfitodia?tab=repositories" class="transition hover:scale-110 duration-300">
-                            <img src="./assets/img/GithbubIcon Coklat.png" alt="GitHub" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
-                        </a>
-                        <a href="https://www.instagram.com/alfito_dia/" class="transition hover:scale-110 duration-300">
-                            <img src="./assets/img/Instagram Coklat.png" alt="Instagram" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
-                        </a>
-                        <a href="https://www.youtube.com/@alfitodia298?si=7pioMqE9RoA2Bbec" class="transition hover:scale-110 duration-300">
-                            <img src="./assets/img/Youtube Coklat.png" alt="YouTube" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
-                        </a>
+    <main>
+        <!-- Landing -->
+        <section id="landing" class="relative bg-[#F6F2EB] pt-32 sm:pt-40 pb-44 sm:pb-65 font-geist overflow-hidden">
+            <div class="absolute top-2 -left-20 w-44 h-44 rounded-full bg-[#C89B3C] blur-3xl opacity-70 z-0" aria-hidden="true"></div>
+            <div class="absolute bottom-12 -right-20 w-44 h-44 rounded-full bg-[#C89B3C] blur-3xl opacity-70 z-0" aria-hidden="true"></div>
+            <div class="relative z-20 max-w-6xl mx-auto w-full px-5 sm:px-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-0">
+                    <div class="flex flex-col items-center lg:items-start">
+                        <h1 class="text-[clamp(64px,15vw,200px)] leading-none text-[#006041] font-flatlion text-center lg:text-left">
+                            Hello!
+                        </h1>
+                        <h2 class="text-lg sm:text-2xl lg:text-[28px] text-[#8B5E3C] font-geist text-center lg:text-left mt-2">
+                            Alfito Deanova Issac Alfarros
+                        </h2>
+                        <h3 class="text-base sm:text-xl lg:text-[22px] font-semibold text-[#8B5E3C] mt-1 font-geist text-center lg:text-left">
+                            <span id="typing-text"></span>
+                            <span class="animate-pulse" aria-hidden="true">|</span>
+                        </h3>
+                        <div class="w-full max-w-75 h-0.5 bg-[#8B5E3C] mt-2 mb-6"></div>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6">
+                            <a href="https://wa.me/qr/C6KCP74A72ABM1" rel="noopener noreferrer" aria-label="Buka WhatsApp" class="transition hover:scale-110 duration-300">
+                                <img src="./assets/img/Wa Coklat.png" alt="WhatsApp" width="32" height="32" loading="lazy" decoding="async" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
+                            </a>
+                            <a href="mailto:kabmalim@gmail.com" aria-label="Kirim Email" class="transition hover:scale-110 duration-300">
+                                <img src="./assets/img/Gmail Coklat.png" alt="Email" width="32" height="32" loading="lazy" decoding="async" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
+                            </a>
+                            <a href="https://github.com/alfitodia?tab=repositories" rel="noopener noreferrer" aria-label="Buka GitHub" class="transition hover:scale-110 duration-300">
+                                <img src="./assets/img/GithbubIcon Coklat.png" alt="GitHub" width="32" height="32" loading="lazy" decoding="async" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
+                            </a>
+                            <a href="https://www.instagram.com/alfito_dia/" rel="noopener noreferrer" aria-label="Buka Instagram" class="transition hover:scale-110 duration-300">
+                                <img src="./assets/img/Instagram Coklat.png" alt="Instagram" width="32" height="32" loading="lazy" decoding="async" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
+                            </a>
+                            <a href="https://www.youtube.com/@alfitodia298?si=7pioMqE9RoA2Bbec" rel="noopener noreferrer" aria-label="Buka YouTube" class="transition hover:scale-110 duration-300">
+                                <img src="./assets/img/Youtube Coklat.png" alt="YouTube" width="32" height="32" loading="lazy" decoding="async" class="w-8 h-8 sm:w-10 sm:h-10 object-contain">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="flex justify-center lg:justify-end mt-8 lg:mt-0">
-                    <div class="relative w-full max-w-[300px] aspect-[5/7] border-[3px] border-[#8B5E3C] rounded-2xl flex items-end justify-center overflow-hidden">
-                        <img src="assets/img/Alfito.png" alt="Profile" class="w-full h-full object-contain">
+                    <div class="flex justify-center lg:justify-end mt-8 lg:mt-0">
+                        <div class="relative w-full max-w-75 aspect-5/7 border-[3px] border-[#8B5E3C] rounded-2xl flex items-end justify-center overflow-hidden">
+                            <img src="assets/img/Alfito.png" alt="Foto profil Alfito Deanova" width="400" height="560" fetchpriority="high" class="w-full h-full object-contain">
+                        </div>
                     </div>
                 </div>
             </div>
+            <img src="./assets/img/Panorama Desa.png" alt="Panorama desa" width="1200" height="675" decoding="async"
+                class="absolute bottom-0 left-0 w-full -translate-y-16 sm:-translate-y-23 z-10 object-cover pointer-events-none">
+            <div class="absolute bottom-0 left-0 w-full h-32 sm:h-44 bg-linear-to-b from-transparent via-white/20 to-white pointer-events-none z-30" aria-hidden="true"></div>
+        </section>
+
+        <!-- SKILLS & ACHIEVEMENT -->
+        <section id="skills" aria-labelledby="skills-title" class="pt-12 sm:pt-20 pb-1 bg-white font-geist">
+            <h2 id="skills-title" class="sr-only">Skill dan Achievement</h2>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 reveal">
+                <div class="flex justify-center mb-8">
+                    <div class="flex p-1 rounded-full border border-black/20 bg-black/2 backdrop-blur-[20px] shadow-lg">
+                        <button id="btnSkill" type="button" class="px-5 sm:px-8 py-2 rounded-full border border-black/20 bg-black/2 backdrop-blur-[20px] text-black font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-105">Skill</button>
+                        <button id="btnAchievement" type="button" class="px-5 sm:px-8 py-2 rounded-full text-black font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-black/10 hover:scale-105">Achievement</button>
+                    </div>
+                </div>
+
+                <!-- SKILL -->
+                <div id="skillContent" class="pb-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-0">
+                        <div class="lg:border-r border-b lg:border-b-0 border-gray-300 pb-10 lg:pb-0 lg:px-8">
+                            <h3 class="text-[clamp(36px,8vw,72px)] leading-none text-center font-flatlion mb-8 sm:mb-12 text-black">Editing</h3>
+                            <div class="grid grid-cols-3 gap-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 justify-items-center">
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/ai.png" alt="Adobe Illustrator" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Adobe Illustrator</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Ae.png" alt="Adobe After Effect" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">After Effect</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Pr.png" alt="Adobe Premiere Pro" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Premiere Pro</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Ps.png" alt="Adobe Photoshop" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Adobe Photoshop</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Au.png" alt="Adobe Audition" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Adobe Audio</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Figma.jpg" alt="Figma" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Figma</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/3d Blender.png" alt="Blender 3D" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">3d Blender</p>
+                                </div>
+                                <div class="hidden sm:block"></div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Canva.png" alt="Canva" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Canva</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:border-r border-b lg:border-b-0 border-gray-300 pb-10 lg:pb-0 lg:px-8">
+                            <h3 class="text-[clamp(28px,6vw,72px)] leading-none text-center font-flatlion mb-8 sm:mb-12 text-black">Programming</h3>
+                            <div class="grid grid-cols-3 gap-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 justify-items-center">
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Html.png" alt="HTML" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">HTML</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Css.png" alt="CSS" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">CSS</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Js.png" alt="JavaScript" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">JavaScript</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Phyton.png" alt="Python" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Python</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/PHP.png" alt="PHP" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">PHP</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Laravel.webp" alt="Laravel" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Laravel</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Godot.png" alt="Godot" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Godot</p>
+                                </div>
+                                <div class="hidden sm:block"></div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Arduino.png" alt="Arduino" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Arduino C++</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lg:px-8">
+                            <h3 class="text-[clamp(28px,6vw,72px)] leading-none text-center font-flatlion mb-8 sm:mb-12 text-black">Mathematics</h3>
+                            <div class="grid grid-cols-3 gap-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 justify-items-center">
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Minitab.jpeg" alt="Minitab" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Minitab</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/SPSS.webp" alt="SPSS" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">SPSS</p>
+                                </div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/R.png" alt="R" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">R</p>
+                                </div>
+                                <div class="hidden sm:block"></div>
+                                <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
+                                    <img src="assets/img/Excel.webp" alt="Excel" width="32" height="32" loading="lazy" decoding="async" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Excel</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center mt-12 sm:mt-16 px-2">
+                        <div class="bg-[#006041] rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white text-xs sm:text-sm text-center">
+                            <span class="font-semibold">Soft Skill :</span> Komunikasi, Pemecahan Masalah, Manajemen Kerja Tim, Kepemimpinan, Kreatif, dan Inovatif
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACHIEVEMENT -->
+                <div id="achievementContent" class="hidden pb-8">
+                    <div class="text-center mb-8 px-2">
+                        <p class="text-sm sm:text-[17px] text-gray-700 leading-7">
+                            Berbagai sertifikat yang telah saya peroleh dari beberapa platform<br class="hidden sm:block"> sebagai bukti pembelajaran dan pengembangan diri
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="certificateGrid">
+                        <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <img src="assets/img/Sertif Rekan.png" alt="Sertifikat Juara Harapan 2 Budidaya" width="320" height="180" loading="lazy" decoding="async" class="w-full sm:w-40 h-45 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara Harapan 2<br>Budidaya- Tahapan Awal</h3>
+                                    <p class="text-sm sm:text-[15px] mt-2">KMI Expo 2025</p>
+                                    <div class="mt-3 sm:mt-5 space-y-2">
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Anggota</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="1">
+                                <span class="font-medium">View Certificate</span>
+                            </button>
+                        </div>
+
+                        <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <img src="assets/img/SertifKPP.jpg.jpeg" alt="Sertifikat Juara 1 Best Project Implementation" width="320" height="180" loading="lazy" decoding="async" class="w-full sm:w-40 h-45 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara 1 Best Project<br>Implementation</h3>
+                                    <p class="text-sm sm:text-[15px] mt-2">KPP Mining Youth in Action 2025</p>
+                                    <div class="mt-3 sm:mt-5 space-y-2">
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Pendesain dan Pemrograman</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                                                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="2"><span class="font-medium">View Certificate</span></button>
+                        </div>
+
+                        <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <img src="assets/img/SertifStand.png" alt="Sertifikat Juara Harapan 2 Stand Terbaik" width="320" height="180" loading="lazy" decoding="async" class="w-full sm:w-40 h-45 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara Harapan 2<br>Stand Terbaik</h3>
+                                    <p class="text-sm sm:text-[15px] mt-2">KMI Expo 2025</p>
+                                    <div class="mt-3 sm:mt-5 space-y-2">
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Pendesain Booth</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="3"><span class="font-medium">View Certificate</span></button>
+                        </div>
+
+                        <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <img src="assets/img/Amli.png" alt="Sertifikat Juara 3 PKM-VGK" width="320" height="180" loading="lazy" decoding="async" class="w-full sm:w-40 h-45 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara 3<br>PKM-VGK</h3>
+                                    <p class="text-sm sm:text-[15px] mt-2">PKM AML1 Indonesia</p>
+                                    <div class="mt-3 sm:mt-5 space-y-2">
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Juni-November 2024</span></div>
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Director</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="4"><span class="font-medium">View Certificate</span></button>
+                        </div>
+
+                        <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <img src="assets/img/SertifJuri.jpg.jpeg" alt="Sertifikat Juri Omega Frame Bombastis" width="320" height="180" loading="lazy" decoding="async" class="w-full sm:w-40 h-45 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juri Omega Frame<br>Bombastis</h3>
+                                    <p class="text-sm sm:text-[15px] mt-2">HMD PIPA</p>
+                                    <div class="mt-3 sm:mt-5 space-y-2">
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>21-30 Oktober 2025</span></div>
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Juri</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="5"><span class="font-medium">View Certificate</span></button>
+                        </div>
+
+                        <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <img src="assets/img/SertifIDE3.jpeg" alt="Sertifikat Juara 2 Essay dan Bisnis Plan Nasional" width="320" height="180" loading="lazy" decoding="async" class="w-full sm:w-40 h-45 object-cover rounded">
+                                <div class="flex-1">
+                                    <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara 2 Essay &<br>Bisnis Plan Nasional</h3>
+                                    <p class="text-sm sm:text-[15px] mt-2">Sentosa Foundation</p>
+                                    <div class="mt-3 sm:mt-5 space-y-2">
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
+                                        <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" alt="" aria-hidden="true" width="20" height="20" loading="lazy" decoding="async" class="w-5 h-5 sm:w-6 sm:h-6"><span>Anggota</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="6"><span class="font-medium">View Certificate</span></button>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center items-center gap-4 mt-10">
+                        <button id="btnPrev" type="button" aria-label="Halaman sertifikat sebelumnya" class="w-10 h-10 rounded-full border border-black bg-black/2 backdrop-blur-xl hover:bg-black/25 transition-all duration-300 hover:scale-105 flex justify-center items-center"><img src="assets/img/Chevron Left.png" alt="" aria-hidden="true" width="16" height="16" class="w-4 h-4"></button>
+                        <div id="pageNumber" class="w-10 h-10 rounded-xl border border-black bg-black/2 backdrop-blur-xl flex justify-center items-center font-semibold text-black">1</div>
+                        <button id="btnNext" type="button" aria-label="Halaman sertifikat berikutnya" class="w-10 h-10 rounded-full border border-black bg-black/2 backdrop-blur-xl hover:bg-black/25 transition-all duration-300 hover:scale-105 flex justify-center items-center"><img src="assets/img/Chevron.png" alt="" aria-hidden="true" width="16" height="16" class="w-4 h-4"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Garis Pemisah -->
+        <div class="relative h-16 bg-white overflow-hidden opacity-30" aria-hidden="true">
+            <img src="./assets/img/MY STORY.png" alt="" width="1200" height="64" loading="lazy" decoding="async" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto z-10 pointer-events-none">
         </div>
-        <img src="./assets/img/Panorama Desa.png" alt="Panorama Desa"
-            class="absolute bottom-0 left-0 w-full -translate-y-16 sm:-translate-y-23 z-10 object-cover pointer-events-none">
-        <div class="absolute bottom-0 left-0 w-full h-32 sm:h-44 bg-linear-to-b from-transparent via-white/20 to-white pointer-events-none z-30"></div>
-    </section>
 
-    <!-- SKILLS & ACHIEVEMENT -->
-    <section id="skills" class="pt-12 sm:pt-20 pb-1 bg-white font-geist">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 reveal">
-            <div class="flex justify-center mb-8">
-                <div class="flex p-1 rounded-full border border-black/20 bg-black/2 backdrop-blur-[20px] shadow-lg">
-                    <button id="btnSkill" class="px-5 sm:px-8 py-2 rounded-full border border-black/20 bg-black/2 backdrop-blur-[20px] text-black font-semibold text-sm sm:text-base transition-all duration-300 hover:scale-105">Skill</button>
-                    <button id="btnAchievement" class="px-5 sm:px-8 py-2 rounded-full text-black font-semibold text-sm sm:text-base transition-all duration-300 hover:bg-black/10 hover:scale-105">Achievement</button>
-                </div>
-            </div>
-
-            <!-- SKILL -->
-            <div id="skillContent" class="pb-8">
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-0">
-                    <!-- Editing -->
-                    <div class="lg:border-r border-b lg:border-b-0 border-gray-300 pb-10 lg:pb-0 lg:px-8">
-                        <h2 class="text-[clamp(36px,8vw,72px)] leading-none text-center font-flatlion mb-8 sm:mb-12 text-black">Editing</h2>
-                        <div class="grid grid-cols-3 gap-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 justify-items-center">
-                            <!-- ... ulangi untuk semua icon: ganti w-26 h-26 jadi w-20 h-20 sm:w-26 sm:h-26, img w-12 jadi w-8 sm:w-12, teks text-[11px] jadi text-[9px] sm:text-[11px] ... -->
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/ai.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Adobe Illustrator</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Ae.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">After Effect</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Pr.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Premiere Pro</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Ps.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Adobe Photoshop</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Au.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Adobe Audio</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Figma.jpg" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Figma</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/3d Blender.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">3d Blender</p>
-                            </div>
-                            <div class="hidden sm:block"></div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Canva.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Canva</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Programming -->
-                    <div class="lg:border-r border-b lg:border-b-0 border-gray-300 pb-10 lg:pb-0 lg:px-8">
-                        <h2 class="text-[clamp(28px,6vw,72px)] leading-none text-center font-flatlion mb-8 sm:mb-12 text-black">Programming</h2>
-                        <div class="grid grid-cols-3 gap-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 justify-items-center">
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Html.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">HTML</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Css.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">CSS</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Js.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">JavaScript</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Phyton.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Python</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/PHP.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">PHP</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Laravel.webp" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Laravel</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Godot.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Godot</p>
-                            </div>
-                            <div class="hidden sm:block"></div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Arduino.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Arduino C++</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mathematics -->
-                    <div class="lg:px-8">
-                        <h2 class="text-[clamp(28px,6vw,72px)] leading-none text-center font-flatlion mb-8 sm:mb-12 text-black">Mathematics</h2>
-                        <div class="grid grid-cols-3 gap-4 sm:gap-x-8 gap-y-6 sm:gap-y-10 justify-items-center">
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Minitab.jpeg" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Minitab</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/SPSS.webp" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">SPSS</p>
-                            </div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/R.png" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">R</p>
-                            </div>
-                            <div class="hidden sm:block"></div>
-                            <div class="w-20 h-20 sm:w-26 sm:h-26 relative overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-xl shadow-lg flex flex-col items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-xl">
-                                <img src="assets/img/Excel.webp" class="w-8 sm:w-12"><p class="text-black text-[9px] sm:text-[11px] font-semibold mt-1 text-center px-1">Excel</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Pengalaman Magang -->
+        <section id="experience" aria-labelledby="experience-title" class="py-12 sm:py-20 bg-white font-geist">
+            <div class="reveal">
+                <div class="text-center mb-10 sm:mb-16 px-5">
+                    <h2 id="experience-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#006041]">Pengalaman Magang</h2>
+                    <p class="text-black mt-4 max-w-2xl mx-auto text-sm sm:text-base">Beberapa pengalaman saya selama menjalani program magang di berbagai instansi dan perusahaan di bidang teknologi informasi dan matematika.</p>
                 </div>
 
-                <!-- Soft Skill -->
-                <div class="flex justify-center mt-12 sm:mt-16 px-2">
-                    <div class="bg-[#006041] rounded-full px-4 sm:px-6 py-2 sm:py-3 text-white text-xs sm:text-sm text-center">
-                        <span class="font-semibold">Soft Skill :</span> Komunikasi, Pemecahan Masalah, Manajemen Kerja Tim, Kepemimpinan, Kreatif, dan Inovatif
-                    </div>
-                </div>
-            </div>
-
-            <!-- ACHIEVEMENT -->
-            <div id="achievementContent" class="hidden pb-8">
-                <div class="text-center mb-8 px-2">
-                    <p class="text-sm sm:text-[17px] text-gray-700 leading-7">
-                        Berbagai sertifikat yang telah saya peroleh dari beberapa platform<br class="hidden sm:block"> sebagai bukti pembelajaran dan pengembangan diri
-                    </p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="certificateGrid">
-                    <!-- Card 1 -->
-                    <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <img src="assets/img/Sertif Rekan.png" class="w-full sm:w-40 h-45 object-cover rounded">
-                            <div class="flex-1">
-                                <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara Harapan 2<br>Budidaya- Tahapan Awal</h3>
-                                <p class="text-sm sm:text-[15px] mt-2">KMI Expo 2025</p>
-                                <div class="mt-3 sm:mt-5 space-y-2">
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Anggota</span></div>
+                <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+                    <div class="hidden lg:block absolute left-6 top-0 bottom-0 w-0.5 bg-black z-0" aria-hidden="true"></div>
+                    <div class="space-y-8 lg:ml-16">
+                        <div class="relative">
+                            <div class="hidden lg:flex absolute top-1/2 -translate-y-1/2 -left-13.5 w-7 h-7 rounded-full border-2 border-black bg-white items-center justify-center z-10" aria-hidden="true">
+                                <div class="w-3 h-3 rounded-full bg-black"></div>
+                            </div>
+                            <div class="overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-[20px] p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6 items-stretch">
+                                <div class="flex flex-col justify-center items-center border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
+                                    <img src="assets/img/Kemenkeu.png" alt="Logo Kemenkeu" width="144" height="144" loading="lazy" decoding="async" class="w-28 sm:w-36 object-contain">
                                 </div>
-                            </div>
-                        </div>
-                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="1">
-                            <span class="font-medium">View Certificate</span>
-                        </button>
-                    </div>
-                    <!-- Ulangi Card 2-6 dengan struktur identik -->
-                    <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <img src="assets/img/SertifKPP.jpg.jpeg" class="w-full sm:w-40 h-45 object-cover rounded">
-                            <div class="flex-1">
-                                <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara 1 Best Project<br>Implementation</h3>
-                                <p class="text-sm sm:text-[15px] mt-2">KPP Mining Youth in Action 2025</p>
-                                <div class="mt-3 sm:mt-5 space-y-2">
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Pendesain dan Pemrograman</span></div>
+                                <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
+                                    <span class="w-fit px-4 py-1 bg-[#8B5E3C] rounded-full text-xs font-semibold text-white">IT Support Intern</span>
+                                    <h3 class="text-xl sm:text-2xl font-bold mt-3 text-black">KPP Pratama Kepanjen</h3>
+                                    <p class="text-sm text-black mt-3 leading-6 text-justify">Bertanggung jawab dalam mendukung tim IT dalam menjaga stabilitas sistem, jaringan, dan perangkat agar operasional kantor berjalan optimal.</p>
                                 </div>
-                            </div>
-                        </div>
-                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="2"><span class="font-medium">View Certificate</span></button>
-                    </div>
-                    <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <img src="assets/img/SertifStand.png" class="w-full sm:w-40 h-45 object-cover rounded">
-                            <div class="flex-1">
-                                <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara Harapan 2<br>Stand Terbaik</h3>
-                                <p class="text-sm sm:text-[15px] mt-2">KMI Expo 2025</p>
-                                <div class="mt-3 sm:mt-5 space-y-2">
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Pendesain Booth</span></div>
+                                <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
+                                    <h4 class="font-bold mb-3 text-black">Tugas dan Tanggung Jawab</h4>
+                                    <ul class="text-sm space-y-2 list-disc ml-5 text-black">
+                                        <li>Monitoring server dan jaringan</li>
+                                        <li>Maintenance hardware &amp; software</li>
+                                        <li>Backup data server</li>
+                                        <li>Troubleshooting perangkat</li>
+                                        <li>User support</li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="3"><span class="font-medium">View Certificate</span></button>
-                    </div>
-                    <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <img src="assets/img/Amli.png" class="w-full sm:w-40 h-45 object-cover rounded">
-                            <div class="flex-1">
-                                <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara 3<br>PKM-VGK</h3>
-                                <p class="text-sm sm:text-[15px] mt-2">PKM AML1 Indonesia</p>
-                                <div class="mt-3 sm:mt-5 space-y-2">
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Juni-November 2024</span></div>
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Director</span></div>
+                                <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
+                                    <h4 class="font-bold mb-3 text-black">Teknologi &amp; Tools</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/FigmaHitam.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 h-4 inline-block mr-1">Figma</span>
+                                        <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Nagios.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 h-4 inline-block mr-1">Nagios</span>
+                                        <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Htop.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 h-4 inline-block mr-1">htop</span>
+                                        <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Rsync.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 h-4 inline-block mr-1">rsync</span>
+                                        <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Cron.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 h-4 inline-block mr-1">Cron</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="4"><span class="font-medium">View Certificate</span></button>
-                    </div>
-                    <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <img src="assets/img/SertifJuri.jpg.jpeg" class="w-full sm:w-40 h-45 object-cover rounded">
-                            <div class="flex-1">
-                                <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juri Omega Frame<br>Bombastis</h3>
-                                <p class="text-sm sm:text-[15px] mt-2">HMD PIPA</p>
-                                <div class="mt-3 sm:mt-5 space-y-2">
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>21-30 Oktober 2025</span></div>
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Juri</span></div>
+                                <div class="flex items-center justify-between lg:justify-end gap-6">
+                                    <div class="flex items-center gap-2">
+                                        <img src="assets/img/Calendarmini.png" alt="" aria-hidden="true" width="32" height="32" loading="lazy" decoding="async" class="w-6 h-6 sm:w-8 sm:h-8 object-contain">
+                                        <span class="text-sm sm:text-[15px] text-black">Februari - Juni 2025</span>
+                                    </div>
+                                    <button type="button" aria-label="Lihat detail magang"><img src="assets/img/ArrowCoklat.png" alt="" aria-hidden="true" width="32" height="32" loading="lazy" decoding="async" class="w-6 h-6 sm:w-8 sm:h-8 object-contain"></button>
                                 </div>
-                            </div>
-                        </div>
-                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="5"><span class="font-medium">View Certificate</span></button>
-                    </div>
-                    <div class="certificate-card relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-xl shadow-lg p-3 min-h-70 h-auto flex flex-col justify-between text-black transition-all duration-300">
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <img src="assets/img/SertifIDE3.jpeg" class="w-full sm:w-40 h-45 object-cover rounded">
-                            <div class="flex-1">
-                                <h3 class="text-[16px] sm:text-[18px] font-bold leading-6 text-[#006041]">Juara 2 Essay &<br>Bisnis Plan Nasional</h3>
-                                <p class="text-sm sm:text-[15px] mt-2">Sentosa Foundation</p>
-                                <div class="mt-3 sm:mt-5 space-y-2">
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Calendar.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>19-21 November 2025</span></div>
-                                    <div class="flex items-center gap-2 text-sm sm:text-[15px]"><img src="assets/img/Person.png" class="w-5 h-5 sm:w-6 sm:h-6"><span>Anggota</span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="button" class="view-certificate mt-4 py-2 bg-[#006041] text-white border border-[#006041] rounded-full flex justify-center items-center hover:bg-transparent hover:text-[#006041] hover:border-[#006041] duration-300 w-full" data-certificate="6"><span class="font-medium">View Certificate</span></button>
-                    </div>
-                </div>
-
-                <div class="flex justify-center items-center gap-4 mt-10">
-                    <button id="btnPrev" class="w-10 h-10 rounded-full border border-black bg-black/2 backdrop-blur-xl hover:bg-black/25 transition-all duration-300 hover:scale-105 flex justify-center items-center"><img src="assets/img/Chevron Left.png" alt="Previous" class="w-4 h-4"></button>
-                    <div id="pageNumber" class="w-10 h-10 rounded-xl border border-black bg-black/2 backdrop-blur-xl flex justify-center items-center font-semibold text-black">1</div>
-                    <button id="btnNext" class="w-10 h-10 rounded-full border border-black bg-black/2 backdrop-blur-xl hover:bg-black/25 transition-all duration-300 hover:scale-105 flex justify-center items-center"><img src="assets/img/Chevron.png" alt="Next" class="w-4 h-4"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Garis Pemisah -->
-    <div class="relative h-16 bg-white overflow-hidden opacity-30">
-        <img src="./assets/img/MY STORY.png" alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-auto z-10 pointer-events-none">
-    </div>
-
-    <!-- Pengalaman Magang -->
-    <section id="experience" class="py-12 sm:py-20 bg-white font-geist">
-        <div class="reveal">
-            <div class="text-center mb-10 sm:mb-16 px-5">
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#006041]">Pengalaman Magang</h2>
-                <p class="text-black mt-4 max-w-2xl mx-auto text-sm sm:text-base">Beberapa pengalaman saya selama menjalani program magang di berbagai instansi dan perusahaan di bidang teknologi informasi dan matematika.</p>
-            </div>
-
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
-                <div class="hidden lg:block absolute left-6 top-0 bottom-0 w-0.5 bg-black z-0"></div>
-                <div class="space-y-8 lg:ml-16">
-                    <div class="relative">
-                        <div class="hidden lg:flex absolute top-1/2 -translate-y-1/2 -left-13.5 w-7 h-7 rounded-full border-2 border-black bg-white items-center justify-center z-10">
-                            <div class="w-3 h-3 rounded-full bg-black"></div>
-                        </div>
-                        <div class="overflow-hidden rounded-xl border border-black bg-black/2 backdrop-blur-[20px] p-4 sm:p-6 grid grid-cols-1 lg:grid-cols-5 gap-4 sm:gap-6 items-stretch">
-                            <div class="flex flex-col justify-center items-center border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
-                                <img src="assets/img/Kemenkeu.png" class="w-28 sm:w-36 object-contain">
-                            </div>
-                            <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
-                                <span class="w-fit px-4 py-1 bg-[#8B5E3C] rounded-full text-xs font-semibold text-white">IT Support Intern</span>
-                                <h3 class="text-xl sm:text-2xl font-bold mt-3 text-black">KPP Pratama Kepanjen</h3>
-                                <p class="text-sm text-black mt-3 leading-6 text-justify">Bertanggung jawab dalam mendukung tim IT dalam menjaga stabilitas sistem, jaringan, dan perangkat agar operasional kantor berjalan optimal.</p>
-                            </div>
-                            <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
-                                <h4 class="font-bold mb-3 text-black">Tugas dan Tanggung Jawab</h4>
-                                <ul class="text-sm space-y-2 list-disc ml-5 text-black">
-                                    <li>Monitoring server dan jaringan</li>
-                                    <li>Maintenance hardware & software</li>
-                                    <li>Backup data server</li>
-                                    <li>Troubleshooting perangkat</li>
-                                    <li>User support</li>
-                                </ul>
-                            </div>
-                            <div class="flex flex-col border-b lg:border-b-0 lg:border-r border-black pb-4 lg:pb-0 lg:pr-6">
-                                <h4 class="font-bold mb-3 text-black">Teknologi & Tools</h4>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/FigmaHitam.png" class="w-4 h-4 inline-block mr-1">Figma</span>
-                                    <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Nagios.png" class="w-4 h-4 inline-block mr-1">Nagios</span>
-                                    <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Htop.png" class="w-4 h-4 inline-block mr-1">htop</span>
-                                    <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Rsync.png" class="w-4 h-4 inline-block mr-1">rsync</span>
-                                    <span class="bg-[#F6F2EB] px-3 py-1 rounded-lg text-sm text-black flex items-center"><img src="assets/img/Cron.png" class="w-4 h-4 inline-block mr-1">Cron</span>
-                                </div>
-                            </div>
-                            <div class="flex items-center justify-between lg:justify-end gap-6">
-                                <div class="flex items-center gap-2">
-                                    <img src="assets/img/Calendarmini.png" alt="Calendar" class="w-6 h-6 sm:w-8 sm:h-8 object-contain">
-                                    <span class="text-sm sm:text-[15px] text-black">Februari - Juni 2025</span>
-                                </div>
-                                <button><img src="assets/img/ArrowCoklat.png" alt="Arrow" class="w-6 h-6 sm:w-8 sm:h-8 object-contain"></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pengalaman Organisasi -->
-    <section id="organization" class="relative pt-20 sm:pt-28 pb-12 sm:pb-16 bg-[#F6F2EB] font-geist">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 reveal">
-            <div class="flex justify-center mt-6 sm:mt-10 mb-10 sm:mb-14">
-                <div class="inline-block w-full max-w-md">
-                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-[#006041] text-center">Pengalaman Organisasi</h2>
-                    <div class="relative w-full mt-4">
-                        <div class="h-0.5 bg-black"></div>
-                        <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
-                        <div class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+        <!-- Pengalaman Organisasi -->
+        <section id="organization" aria-labelledby="organization-title" class="relative pt-20 sm:pt-28 pb-12 sm:pb-16 bg-[#F6F2EB] font-geist">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 reveal">
+                <div class="flex justify-center mt-6 sm:mt-10 mb-10 sm:mb-14">
+                    <div class="inline-block w-full max-w-md">
+                        <h2 id="organization-title" class="text-3xl sm:text-4xl lg:text-5xl font-medium text-[#006041] text-center">Pengalaman Organisasi</h2>
+                        <div class="relative w-full mt-4" aria-hidden="true">
+                            <div class="h-0.5 bg-black"></div>
+                            <div class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+                            <div class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
+                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_20px_10px_rgba(255,255,255,0.08)] transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.15),inset_0_0_25px_10px_rgba(255,255,255,0.12)] min-h-auto lg:min-h-125 p-5">
+                        <div class="flex items-center gap-5">
+                            <img src="assets/img/rohis.png" alt="Logo ROHIS UTSFILLAH" width="96" height="96" loading="lazy" decoding="async" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
+                            <div>
+                                <h3 class="text-xl sm:text-2xl font-bold text-black">ROHIS UTSFILLAH</h3>
+                                <p class="text-base sm:text-lg text-black">Ketua Umum</p>
+                                <p class="text-base sm:text-lg text-black">2020/2021</p>
+                            </div>
+                        </div>
+                        <div class="relative mt-5" aria-hidden="true">
+                            <div class="h-0.5 bg-black w-full"></div>
+                            <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+                            <div class="absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+                        </div>
+                        <ul class="list-disc pl-5 mt-5 space-y-2 text-sm sm:text-[16px] leading-6 text-black text-justify">
+                            <li>Memimpin dan mengoordinasikan seluruh kepengurusan organisasi selama satu periode.</li>
+                            <li>Menyusun serta mengawasi pelaksanaan program kerja setiap divisi.</li>
+                            <li>Mengelola komunikasi dan koordinasi antar pengurus untuk mencapai tujuan organisasi.</li>
+                            <li>Mengambil keputusan dan menyelesaikan permasalahan organisasi secara efektif.</li>
+                            <li>Meningkatkan kemampuan kepemimpinan, public speaking, dan manajemen organisasi.</li>
+                            <li>Membangun kerja sama tim yang solid dalam menjalankan berbagai kegiatan organisasi.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_20px_10px_rgba(255,255,255,0.08)] transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.15),inset_0_0_25px_10px_rgba(255,255,255,0.12)] min-h-auto lg:min-h-125 p-5">
+                        <div class="flex items-center gap-5">
+                            <img src="assets/img/himafo.png" alt="Logo HIMAFO" width="96" height="96" loading="lazy" decoding="async" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
+                            <div>
+                                <h3 class="text-xl sm:text-2xl font-bold text-black">HIMAFO</h3>
+                                <p class="text-base sm:text-lg text-black">Anggota</p>
+                                <p class="text-base sm:text-lg text-black">2022/2025</p>
+                            </div>
+                        </div>
+                        <div class="relative mt-5" aria-hidden="true">
+                            <div class="h-0.5 bg-black w-full"></div>
+                            <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+                            <div class="absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
+                        </div>
+                        <ul class="list-disc pl-5 mt-5 space-y-2 text-sm sm:text-[16px] leading-6 text-black text-justify">
+                            <li>Berpartisipasi aktif dalam berbagai program kerja dan kegiatan himpunan.</li>
+                            <li>Berkontribusi dalam kepanitiaan seminar, pelatihan, dan kegiatan kemahasiswaan.</li>
+                            <li>Bekerja sama dengan anggota lain dalam menyelesaikan tugas organisasi.</li>
+                            <li>Membantu pelaksanaan kegiatan agar berjalan sesuai dengan perencanaan.</li>
+                            <li>Meningkatkan kemampuan komunikasi, kolaborasi, dan manajemen waktu.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
-                <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_20px_10px_rgba(255,255,255,0.08)] transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.15),inset_0_0_25px_10px_rgba(255,255,255,0.12)] min-h-auto lg:min-h-125 p-5">
-                    <div class="flex items-center gap-5">
-                        <img src="assets/img/rohis.png" alt="ROHIS" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
-                        <div>
-                            <h3 class="text-xl sm:text-2xl font-bold text-black">ROHIS UTSFILLAH</h3>
-                            <p class="text-base sm:text-lg text-black">Ketua Umum</p>
-                            <p class="text-base sm:text-lg text-black">2020/2021</p>
-                        </div>
-                    </div>
-                    <div class="relative mt-5">
-                        <div class="h-0.5 bg-black w-full"></div>
-                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
-                        <div class="absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
-                    </div>
-                    <ul class="list-disc pl-5 mt-5 space-y-2 text-sm sm:text-[16px] leading-6 text-black text-justify">
-                        <li>Memimpin dan mengoordinasikan seluruh kepengurusan organisasi selama satu periode.</li>
-                        <li>Menyusun serta mengawasi pelaksanaan program kerja setiap divisi.</li>
-                        <li>Mengelola komunikasi dan koordinasi antar pengurus untuk mencapai tujuan organisasi.</li>
-                        <li>Mengambil keputusan dan menyelesaikan permasalahan organisasi secara efektif.</li>
-                        <li>Meningkatkan kemampuan kepemimpinan, public speaking, dan manajemen organisasi.</li>
-                        <li>Membangun kerja sama tim yang solid dalam menjalankan berbagai kegiatan organisasi.</li>
-                    </ul>
-                </div>
-
-                <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-[0_8px_32px_rgba(0,0,0,0.1),inset_0_1px_0_rgba(255,255,255,0.5),inset_0_-1px_0_rgba(255,255,255,0.1),inset_0_0_20px_10px_rgba(255,255,255,0.08)] transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.15),inset_0_0_25px_10px_rgba(255,255,255,0.12)] min-h-auto lg:min-h-125 p-5">
-                    <div class="flex items-center gap-5">
-                        <img src="assets/img/himafo.png" alt="HIMAFO" class="w-20 h-20 sm:w-24 sm:h-24 object-contain">
-                        <div>
-                            <h3 class="text-xl sm:text-2xl font-bold text-black">HIMAFO</h3>
-                            <p class="text-base sm:text-lg text-black">Anggota</p>
-                            <p class="text-base sm:text-lg text-black">2022/2025</p>
-                        </div>
-                    </div>
-                    <div class="relative mt-5">
-                        <div class="h-0.5 bg-black w-full"></div>
-                        <div class="absolute -left-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
-                        <div class="absolute -right-1 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-black"></div>
-                    </div>
-                    <ul class="list-disc pl-5 mt-5 space-y-2 text-sm sm:text-[16px] leading-6 text-black text-justify">
-                        <li>Berpartisipasi aktif dalam berbagai program kerja dan kegiatan himpunan.</li>
-                        <li>Berkontribusi dalam kepanitiaan seminar, pelatihan, dan kegiatan kemahasiswaan.</li>
-                        <li>Bekerja sama dengan anggota lain dalam menyelesaikan tugas organisasi.</li>
-                        <li>Membantu pelaksanaan kegiatan agar berjalan sesuai dengan perencanaan.</li>
-                        <li>Meningkatkan kemampuan komunikasi, kolaborasi, dan manajemen waktu.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-white to-transparent pointer-events-none"></div>
-    </section>
+            <div class="absolute top-0 left-0 w-full h-32 bg-linear-to-b from-white to-transparent pointer-events-none" aria-hidden="true"></div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-white text-black py-8 sm:py-10 font-geist">
         <div class="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-4 sm:py-6">
             <div class="flex flex-col md:flex-row gap-6 md:gap-0 md:justify-between">
                 <div>
-                    <img src="./assets/img/Icon Kucing Hitam.png" class="w-10 sm:w-12" alt="Logo">
+                    <img src="./assets/img/Icon Kucing Hitam.png" alt="Logo kucing hitam" width="48" height="48" loading="lazy" decoding="async" class="w-10 sm:w-12">
                 </div>
                 <div>
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-none">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-none">
                         Let's talk <br>Hit Me Up!↗
-                    </h1>
-                    <div class="grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 mt-6 sm:mt-8">
+                    </h2>
+                    <nav aria-label="Navigasi footer" class="grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 mt-6 sm:mt-8">
                         <div class="space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg">
                             <a href="./Home.html" class="block hover:translate-x-1 transition">Home</a>
                             <a href="./About.html" class="block hover:translate-x-1 transition">About</a>
@@ -449,26 +488,20 @@
                             <a href="./Contact.html" class="block hover:translate-x-1 transition">Contact</a>
                         </div>
                         <div class="space-y-2 sm:space-y-3 text-sm sm:text-base">
-                            <a href="https://github.com/alfitodia?tab=repositories"
-                                class="flex items-center justify-between w-36 sm:w-40 group">
+                            <a href="https://github.com/alfitodia?tab=repositories" rel="noopener noreferrer" aria-label="GitHub" class="flex items-center justify-between w-36 sm:w-40 group">
                                 <span>Github</span>
-                                <img src="./assets/img/ExternalLinkBlack.png"
-                                    class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
-                            <a href="https://www.instagram.com/alfito_dia/"
-                                class="flex items-center justify-between w-36 sm:w-40 group">
+                            <a href="https://www.instagram.com/alfito_dia/" rel="noopener noreferrer" aria-label="Instagram" class="flex items-center justify-between w-36 sm:w-40 group">
                                 <span>Instagram</span>
-                                <img src="./assets/img/ExternalLinkBlack.png"
-                                    class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
-                            <a href="https://www.tiktok.com/@alfito_dia"
-                                class="flex items-center justify-between w-36 sm:w-40 group">
+                            <a href="https://www.tiktok.com/@alfito_dia" rel="noopener noreferrer" aria-label="TikTok" class="flex items-center justify-between w-36 sm:w-40 group">
                                 <span>TikTok</span>
-                                <img src="./assets/img/ExternalLinkBlack.png"
-                                    class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
 
@@ -482,17 +515,17 @@
         </div>
     </footer>
 
-    <!-- Modal Certificate (tidak diubah) -->
-    <div id="certificateModal" class="fixed inset-0 z-9999 hidden items-center justify-center p-4">
-        <div id="certificateBackdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+    <!-- Modal Certificate -->
+    <div id="certificateModal" role="dialog" aria-modal="true" aria-label="Pratinjau sertifikat" class="fixed inset-0 z-9999 hidden items-center justify-center p-4">
+        <div id="certificateBackdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm" aria-hidden="true"></div>
         <div class="relative z-10 w-full max-w-5xl max-h-[90vh] rounded-2xl p-4 md:p-5 bg-white/20 backdrop-blur-xl border border-white/70 shadow-[0_10px_50px_rgba(0,0,0,0.25)] overflow-hidden">
-            <button id="closeCertificateModal" class="absolute top-3 right-5 z-30 text-3xl md:text-4xl font-bold text-white hover:text-red-300 transition">×</button>
+            <button id="closeCertificateModal" type="button" aria-label="Tutup modal" class="absolute top-3 right-5 z-30 text-3xl md:text-4xl font-bold text-white hover:text-red-300 transition">×</button>
             <div class="w-full h-[60vh] max-h-140 bg-white rounded-xl overflow-hidden flex items-center justify-center">
-                <img id="certificateMainImage" src="" alt="Certificate" class="w-full h-full object-contain transition-all duration-300">
+                <img id="certificateMainImage" src="" alt="Sertifikat" class="w-full h-full object-contain transition-all duration-300">
             </div>
             <div id="certificateThumbnails" class="flex justify-center items-center gap-3 mt-4 overflow-x-auto pb-1"></div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>

@@ -217,6 +217,17 @@
   .pointer-events-none {
     pointer-events: none;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
   .absolute {
     position: absolute;
   }
@@ -504,6 +515,9 @@
   }
   .table {
     display: table;
+  }
+  .aspect-5\/7 {
+    aspect-ratio: 5/7;
   }
   .aspect-\[5\/7\] {
     aspect-ratio: 5/7;
@@ -801,6 +815,9 @@
   }
   .max-w-7xl {
     max-width: var(--container-7xl);
+  }
+  .max-w-75 {
+    max-width: calc(var(--spacing) * 75);
   }
   .max-w-\[300px\] {
     max-width: 300px;

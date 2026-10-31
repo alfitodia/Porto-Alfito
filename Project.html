@@ -1,268 +1,285 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <meta name="theme-color" content="#006041">
+
+    <title>Portofolio Project — Video, Programming &amp; Skripsi</title>
+    <meta name="description" content="Portofolio project Alfito Deanova — karya editing video, desain grafis, pengembangan web, aplikasi IoT, game, dan penelitian skripsi berbasis sensor dan machine learning.">
+    <link rel="canonical" href="https://alfitodia.github.io/portfolio/Project.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portofolio Project — Alfito Deanova">
+    <meta property="og:description" content="Karya video, programming, dan skripsi Alfito Deanova.">
+    <meta property="og:url" content="https://alfitodia.github.io/portfolio/Project.html">
+    <meta property="og:image" content="https://alfitodia.github.io/portfolio/assets/img/WebSkripsi.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portofolio Project — Alfito Deanova">
+    <meta name="twitter:description" content="Karya video, programming, dan skripsi Alfito Deanova.">
+    <meta name="twitter:image" content="https://alfitodia.github.io/portfolio/assets/img/WebSkripsi.png">
+
+    <link rel="preconnect" href="https://www.youtube-nocookie.com">
+    <link rel="icon" type="image/png" href="./public/img/logo.png">
     <link href="./src/output.css" rel="stylesheet">
 </head>
 <body class="bg-[#F6F2EB] overflow-x-hidden">
-    <!-- Navbar -->
-    <nav class="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-full px-3 sm:px-8">
+    <nav aria-label="Navigasi utama" class="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-full px-3 sm:px-8">
         <div class="max-w-7xl mx-auto flex justify-between items-center py-2 sm:py-3 px-3 sm:px-8 relative overflow-hidden rounded-full border border-[#006041] bg-white/15 backdrop-blur-[20px]">
             <div class="text-xl font-bold"></div>
             <ul class="flex gap-3 sm:gap-6 lg:gap-10 text-[10px] sm:text-xs lg:text-sm uppercase tracking-wider sm:tracking-widest font-geist font-bold text-[#006041]">
                 <li><a href="./Home.html" class="relative inline-block pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#006041] after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100">Home</a></li>
                 <li><a href="./About.html" class="relative inline-block pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#006041] after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100">About</a></li>
-                <li><a href="./Project.html" class="relative inline-block pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#006041] after:scale-x-100 after:origin-left">Project</a></li>
+                <li><a href="./Project.html" aria-current="page" class="relative inline-block pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#006041] after:scale-x-100 after:origin-left">Project</a></li>
                 <li><a href="./Contact.html" class="relative inline-block pb-2 after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-full after:h-0.5 after:bg-[#006041] after:origin-left after:scale-x-0 after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100">Contact</a></li>
             </ul>
-            <img src="./public/img/logo.png" class="w-6 sm:w-8">
+            <img src="./public/img/logo.png" width="24" height="24" class="w-6 sm:w-8">
         </div>
     </nav>
 
-    <!-- VIDEO -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-8 pt-28 sm:pt-40 pb-12 sm:pb-20">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 font-geist">
-            <div>
-                <p class="uppercase text-black text-sm mb-2 font-semibold">Video & Design</p>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-[#006041]">Portofolio Editing</h2>
-                <p class="text-black leading-7 text-justify">Berbagai karya dalam bidang editing video dan desain grafis yang menggabungkan kreatifitas dan story telling</p>
-            </div>
-            <div class="lg:col-span-3">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <!-- Card video contoh (ulangi untuk semua video card) -->
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <div class="aspect-video w-full">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/RWpXPN2kZmQ?si=p8ianYoF37-nF2MR" title="Youtube Video Rewind 2020" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4 flex items-center justify-between font-geist">
-                            <div class="flex-1 pr-3">
-                                <h1 class="text-sm font-semibold text-black leading-tight">Video Rewind 2020</h1>
-                                <p class="text-xs text-black/70 mt-1">Adobe Premiere Pro</p>
-                            </div>
-                            <a href="https://youtu.be/RWpXPN2kZmQ" class="relative w-6 h-6 group">
-                                <img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0" alt="">
-                                <img src="./assets/img/ExternalLinkIjo.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <!-- ... ulangi pola yang sama untuk Video Profile ILKOM, Patirtaan, PKM AMLI, TikTok, Instagram ... -->
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <div class="aspect-video w-full">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/7PIPsPJUd6k?si=xwCTq7G9z7rxbykm" title="Youtube Video Profile ILKOM UM 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4 flex items-center justify-between font-geist">
-                            <div class="flex-1 pr-3">
-                                <h1 class="text-sm font-semibold text-black leading-tight">Video Profile ILKOM UM 2023</h1>
-                                <p class="text-xs text-black/70 mt-1">Tukang Drone</p>
-                            </div>
-                            <a href="https://youtu.be/7PIPsPJUd6k" class="relative w-6 h-6 group">
-                                <img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0" alt="">
-                                <img src="./assets/img/ExternalLinkIjo.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <div class="aspect-video w-full">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/tAKrnrrFZ-c?si=tFg004wbrl2wAnQh" title="Patirtaan Ngawonnggo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4 flex items-center justify-between font-geist">
-                            <div class="flex-1 pr-3">
-                                <h1 class="text-sm font-semibold text-black leading-tight">Patirtaan Ngawonnggo</h1>
-                                <p class="text-xs text-black/70 mt-1">Director</p>
-                            </div>
-                            <a href="https://youtu.be/tAKrnrrFZ-c" class="relative w-6 h-6 group">
-                                <img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0" alt="">
-                                <img src="./assets/img/ExternalLinkIjo.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <div class="aspect-video w-full">
-                            <iframe class="w-full h-full" src="https://www.youtube.com/embed/AO5cNbcnIuI?si=RpJs6F-UAnbGJHSh" title="Heart Hugger" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-4 flex items-center justify-between font-geist">
-                            <div class="flex-1 pr-3">
-                                <h1 class="text-sm font-semibold text-black leading-tight">PKM AMLI Heart Hugger</h1>
-                                <p class="text-xs text-black/70 mt-1">Director</p>
-                            </div>
-                            <a href="https://youtu.be/AO5cNbcnIuI" class="relative w-6 h-6 group">
-                                <img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0" alt="">
-                                <img src="./assets/img/ExternalLinkIjo.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/TT Jakarta.png" class="aspect-video w-full object-cover">
-                        <div class="p-4 flex items-center justify-between font-geist">
-                            <div class="flex-1 pr-3">
-                                <h1 class="text-sm font-semibold text-black leading-tight">The Busy Jakarta</h1>
-                                <p class="text-xs text-black/70 mt-1">Editor</p>
-                            </div>
-                            <a href="https://www.tiktok.com/@alfito_dia/video/7146873562979126554" class="relative w-6 h-6 group">
-                                <img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0" alt="">
-                                <img src="./assets/img/ExternalLinkIjo.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/Semarang.jpg" class="aspect-video w-full object-cover">
-                        <div class="p-4 flex items-center justify-between font-geist">
-                            <div class="flex-1 pr-3">
-                                <h1 class="text-sm font-semibold text-black leading-tight">Explore Semarang</h1>
-                                <p class="text-xs text-black/70 mt-1">Kameramen dan Pengedit</p>
-                            </div>
-                            <a href="https://www.instagram.com/reel/C2Hn-jHyLFz/" class="relative w-6 h-6 group">
-                                <img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0" alt="">
-                                <img src="./assets/img/ExternalLinkIjo.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-8 font-geist">
-                    <button id="openModal" class="group flex items-center gap-3 rounded-full bg-[#006041] border border-[#006041] px-3 py-3 text-white shadow-lg transition-all duration-300 hover:bg-transparent">
-                        <span class="px-3 font-semibold text-white transition-colors duration-300 group-hover:text-[#006041]">Lihat Semua Hasil Video</span>
-                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-[#006041] text-xl transition-all duration-300 group-hover:bg-black group-hover:text-white">→</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <h1 class="sr-only">Portofolio Project Alfito Deanova</h1>
 
-    <!-- PROGRAMMING -->
-    <section class="bg-white text-black py-16 sm:py-24">
-        <div class="max-w-7xl mx-auto px-4 sm:px-8 reveal">
+        <!-- VIDEO -->
+        <section aria-labelledby="video-title" class="max-w-7xl mx-auto px-4 sm:px-8 pt-28 sm:pt-40 pb-12 sm:pb-20">
             <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 font-geist">
                 <div>
-                    <p class="uppercase text-black text-sm mb-2 font-semibold">Programming</p>
-                    <h2 class="text-3xl sm:text-4xl font-bold mb-5 text-[#006041]">Portofolio Programming</h2>
-                    <p class="text-black leading-7 text-justify">Project pengembangan aplikasi web, sistem, dan berbagai solusi digital yang fungsional dan efisien</p>
+                    <p class="uppercase text-black text-sm mb-2 font-semibold">Video &amp; Design</p>
+                    <h2 id="video-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 text-[#006041]">Portofolio Editing</h2>
+                    <p class="text-black leading-7 text-justify">Berbagai karya dalam bidang editing video dan desain grafis yang menggabungkan kreatifitas dan story telling</p>
                 </div>
                 <div class="lg:col-span-3">
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                        <!-- Ulangi untuk semua card programming: aspect-video pada img, min-h tetap -->
-                        <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <img src="./assets/img/Project Kemenkeu.png" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <div class="aspect-video w-full">
+                                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/RWpXPN2kZmQ" title="YouTube Video Rewind 2020" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                             <div class="p-4 flex items-center justify-between font-geist">
-                                <div class="flex-1 pr-3"><h1 class="text-sm font-semibold text-black leading-tight">Website KPP Pratama Kepanjen</h1><p class="text-xs text-black/70 mt-1">HTML, CSS, JavaScript</p></div>
-                                <a href="" target="_blank" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                <div class="flex-1 pr-3">
+                                    <h3 class="text-sm font-semibold text-black leading-tight">Video Rewind 2020</h3>
+                                    <p class="text-xs text-black/70 mt-1">Adobe Premiere Pro</p>
+                                </div>
+                                <a href="https://youtu.be/RWpXPN2kZmQ" target="_blank" rel="noopener noreferrer" aria-label="Buka Video Rewind 2020 di YouTube" class="relative w-6 h-6 group">
+                                    <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0">
+                                    <img src="./assets/img/ExternalLinkIjo.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                </a>
                             </div>
                         </div>
-                        <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <img src="./assets/img/Healthylife.png" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <div class="aspect-video w-full">
+                                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/7PIPsPJUd6k" title="YouTube Video Profile ILKOM UM 2023" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                             <div class="p-4 flex items-center justify-between font-geist">
-                                <div class="flex-1 pr-3"><h1 class="text-sm font-semibold text-black leading-tight">Game Healthylife Simulator</h1><p class="text-xs text-black/70 mt-1">Godot, C#</p></div>
-                                <a href="" target="_blank" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                <div class="flex-1 pr-3">
+                                    <h3 class="text-sm font-semibold text-black leading-tight">Video Profile ILKOM UM 2023</h3>
+                                    <p class="text-xs text-black/70 mt-1">Tukang Drone</p>
+                                </div>
+                                <a href="https://youtu.be/7PIPsPJUd6k" target="_blank" rel="noopener noreferrer" aria-label="Buka Video Profile ILKOM UM 2023 di YouTube" class="relative w-6 h-6 group">
+                                    <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0">
+                                    <img src="./assets/img/ExternalLinkIjo.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                </a>
                             </div>
                         </div>
-                        <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <img src="./assets/img/Eco Warrior Pertamina.png" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <div class="aspect-video w-full">
+                                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/tAKrnrrFZ-c" title="Patirtaan Ngawonnggo" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                             <div class="p-4 flex items-center justify-between font-geist">
-                                <div class="flex-1 pr-3"><h1 class="text-sm font-semibold text-black leading-tight">Eco Warrior Pertamina</h1><p class="text-xs text-black/70 mt-1">HTML, CSS, JavaScript</p></div>
-                                <a href="" target="_blank" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                <div class="flex-1 pr-3">
+                                    <h3 class="text-sm font-semibold text-black leading-tight">Patirtaan Ngawonnggo</h3>
+                                    <p class="text-xs text-black/70 mt-1">Director</p>
+                                </div>
+                                <a href="https://youtu.be/tAKrnrrFZ-c" target="_blank" rel="noopener noreferrer" aria-label="Buka Patirtaan Ngawonnggo di YouTube" class="relative w-6 h-6 group">
+                                    <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0">
+                                    <img src="./assets/img/ExternalLinkIjo.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                </a>
                             </div>
                         </div>
-                        <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <img src="./assets/img/Hotel Reservasi.png" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <div class="aspect-video w-full">
+                                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/AO5cNbcnIuI" title="PKM AMLI Heart Hugger" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </div>
                             <div class="p-4 flex items-center justify-between font-geist">
-                                <div class="flex-1 pr-3"><h1 class="text-sm font-semibold text-black leading-tight">Website Hotel Reservasi</h1><p class="text-xs text-black/70 mt-1">HTML, CSS, JavaScript, MySQL</p></div>
-                                <a href="" target="_blank" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                <div class="flex-1 pr-3">
+                                    <h3 class="text-sm font-semibold text-black leading-tight">PKM AMLI Heart Hugger</h3>
+                                    <p class="text-xs text-black/70 mt-1">Director</p>
+                                </div>
+                                <a href="https://youtu.be/AO5cNbcnIuI" target="_blank" rel="noopener noreferrer" aria-label="Buka PKM AMLI Heart Hugger di YouTube" class="relative w-6 h-6 group">
+                                    <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0">
+                                    <img src="./assets/img/ExternalLinkIjo.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                </a>
                             </div>
                         </div>
-                        <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <img src="./assets/img/Tournament Warkop.png" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/TT Jakarta.png" alt="The Busy Jakarta" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
                             <div class="p-4 flex items-center justify-between font-geist">
-                                <div class="flex-1 pr-3"><h1 class="text-sm font-semibold text-black leading-tight">Tournament Warkop Antok</h1><p class="text-xs text-black/70 mt-1">Laravel, MySQL, PHP, Laragon</p></div>
-                                <a href="" target="_blank" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                <div class="flex-1 pr-3">
+                                    <h3 class="text-sm font-semibold text-black leading-tight">The Busy Jakarta</h3>
+                                    <p class="text-xs text-black/70 mt-1">Editor</p>
+                                </div>
+                                <a href="https://www.tiktok.com/@alfito_dia/video/7146873562979126554" target="_blank" rel="noopener noreferrer" aria-label="Buka The Busy Jakarta di TikTok" class="relative w-6 h-6 group">
+                                    <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0">
+                                    <img src="./assets/img/ExternalLinkIjo.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                </a>
                             </div>
                         </div>
-                        <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <img src="./assets/img/Static Sensor.jpg.jpeg" class="aspect-video w-full object-cover">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/Semarang.jpg" alt="Explore Semarang" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
                             <div class="p-4 flex items-center justify-between font-geist">
-                                <div class="flex-1 pr-3"><h1 class="text-sm font-semibold text-black leading-tight">Static Sensor</h1><p class="text-xs text-black/70 mt-1">C++, ESP32, HTML, CSS</p></div>
-                                <a href="" target="_blank" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                <div class="flex-1 pr-3">
+                                    <h3 class="text-sm font-semibold text-black leading-tight">Explore Semarang</h3>
+                                    <p class="text-xs text-black/70 mt-1">Kameramen dan Pengedit</p>
+                                </div>
+                                <a href="https://www.instagram.com/reel/C2Hn-jHyLFz/" target="_blank" rel="noopener noreferrer" aria-label="Buka Explore Semarang di Instagram" class="relative w-6 h-6 group">
+                                    <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0">
+                                    <img src="./assets/img/ExternalLinkIjo.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-8 font-geist">
+                        <button id="openModal" type="button" class="group flex items-center gap-3 rounded-full bg-[#006041] border border-[#006041] px-3 py-3 text-white shadow-lg transition-all duration-300 hover:bg-transparent">
+                            <span class="px-3 font-semibold text-white transition-colors duration-300 group-hover:text-[#006041]">Lihat Semua Hasil Video</span>
+                            <span class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-[#006041] text-xl transition-all duration-300 group-hover:bg-black group-hover:text-white" aria-hidden="true">→</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMMING -->
+        <section aria-labelledby="programming-title" class="bg-white text-black py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-8 reveal">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 font-geist">
+                    <div>
+                        <p class="uppercase text-black text-sm mb-2 font-semibold">Programming</p>
+                        <h2 id="programming-title" class="text-3xl sm:text-4xl font-bold mb-5 text-[#006041]">Portofolio Programming</h2>
+                        <p class="text-black leading-7 text-justify">Project pengembangan aplikasi web, sistem, dan berbagai solusi digital yang fungsional dan efisien</p>
+                    </div>
+                    <div class="lg:col-span-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                            <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="./assets/img/Project Kemenkeu.png" alt="Website KPP Pratama Kepanjen" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                                <div class="p-4 flex items-center justify-between font-geist">
+                                    <div class="flex-1 pr-3"><h3 class="text-sm font-semibold text-black leading-tight">Website KPP Pratama Kepanjen</h3><p class="text-xs text-black/70 mt-1">HTML, CSS, JavaScript</p></div>
+                                    <a href="#" aria-label="Lihat Website KPP Pratama Kepanjen" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="./assets/img/Healthylife.png" alt="Game Healthylife Simulator" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                                <div class="p-4 flex items-center justify-between font-geist">
+                                    <div class="flex-1 pr-3"><h3 class="text-sm font-semibold text-black leading-tight">Game Healthylife Simulator</h3><p class="text-xs text-black/70 mt-1">Godot, C#</p></div>
+                                    <a href="#" aria-label="Lihat Game Healthylife Simulator" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="./assets/img/Eco Warrior Pertamina.png" alt="Eco Warrior Pertamina" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                                <div class="p-4 flex items-center justify-between font-geist">
+                                    <div class="flex-1 pr-3"><h3 class="text-sm font-semibold text-black leading-tight">Eco Warrior Pertamina</h3><p class="text-xs text-black/70 mt-1">HTML, CSS, JavaScript</p></div>
+                                    <a href="#" aria-label="Lihat Eco Warrior Pertamina" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="./assets/img/Hotel Reservasi.png" alt="Website Hotel Reservasi" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                                <div class="p-4 flex items-center justify-between font-geist">
+                                    <div class="flex-1 pr-3"><h3 class="text-sm font-semibold text-black leading-tight">Website Hotel Reservasi</h3><p class="text-xs text-black/70 mt-1">HTML, CSS, JavaScript, MySQL</p></div>
+                                    <a href="#" aria-label="Lihat Website Hotel Reservasi" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="./assets/img/Tournament Warkop.png" alt="Tournament Warkop Antok" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                                <div class="p-4 flex items-center justify-between font-geist">
+                                    <div class="flex-1 pr-3"><h3 class="text-sm font-semibold text-black leading-tight">Tournament Warkop Antok</h3><p class="text-xs text-black/70 mt-1">Laravel, MySQL, PHP, Laragon</p></div>
+                                    <a href="#" aria-label="Lihat Tournament Warkop Antok" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden rounded border border-black bg-black/2 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                                <img src="./assets/img/Static Sensor.jpg.jpeg" alt="Static Sensor" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                                <div class="p-4 flex items-center justify-between font-geist">
+                                    <div class="flex-1 pr-3"><h3 class="text-sm font-semibold text-black leading-tight">Static Sensor</h3><p class="text-xs text-black/70 mt-1">C++, ESP32, HTML, CSS</p></div>
+                                    <a href="#" aria-label="Lihat Static Sensor" class="relative w-6 h-6 group"><img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 transition-opacity duration-300 group-hover:opacity-0"><img src="./assets/img/ExternalLinkWhite.png" alt="" aria-hidden="true" width="24" height="24" loading="lazy" decoding="async" class="absolute inset-0 w-6 h-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SKRIPSI -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-8 py-16 sm:py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 font-geist reveal">
-            <div>
-                <p class="uppercase text-black text-sm font-semibold">Skripsi</p>
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 text-[#006041]">Skripsi</h2>
-                <p class="text-black leading-7 text-justify">Penelitian dan pengembangan sistem informasi peringatan resiko kondensasi berbasis IoT dan perhitungan dew point dengan visuliasai menggunakan algoritma K-NN, SARIMA, IQR dengan Metode Capping</p>
-                <a href="https://link-skripsi-kamu.com" target="_blank" class="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#006041] border border-[#006041] px-3 py-3 text-white shadow-lg transition-all duration-300 hover:bg-transparent">
-                    <span class="px-3 font-semibold text-white transition-colors duration-300 group-hover:text-[#006041]">Lihat Detail Skripsi</span>
-                    <span class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-[#006041] text-xl transition-all duration-300 group-hover:bg-black group-hover:text-white">→</span>
-                </a>
-            </div>
-            <div class="lg:col-span-3">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/WebSkripsi.png" class="aspect-video w-full object-cover">
-                        <div class="p-4 font-geist">
-                            <h1 class="text-sm font-semibold text-black leading-tight">Web Monitoring Kondensasi</h1>
-                            <p class="text-xs text-black/70 mt-1">Untuk menampilkan data informasi</p>
+        <!-- SKRIPSI -->
+        <section aria-labelledby="skripsi-title" class="max-w-7xl mx-auto px-4 sm:px-8 py-16 sm:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 font-geist reveal">
+                <div>
+                    <p class="uppercase text-black text-sm font-semibold">Skripsi</p>
+                    <h2 id="skripsi-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-5 text-[#006041]">Skripsi</h2>
+                    <p class="text-black leading-7 text-justify">Penelitian dan pengembangan sistem informasi peringatan resiko kondensasi berbasis IoT dan perhitungan dew point dengan visuliasai menggunakan algoritma K-NN, SARIMA, IQR dengan Metode Capping</p>
+                    <a href="https://repository.um.ac.id/" target="_blank" rel="noopener noreferrer" class="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#006041] border border-[#006041] px-3 py-3 text-white shadow-lg transition-all duration-300 hover:bg-transparent">
+                        <span class="px-3 font-semibold text-white transition-colors duration-300 group-hover:text-[#006041]">Lihat Detail Skripsi</span>
+                        <span class="flex items-center justify-center w-10 h-10 rounded-full bg-white text-[#006041] text-xl transition-all duration-300 group-hover:bg-black group-hover:text-white" aria-hidden="true">→</span>
+                    </a>
+                </div>
+                <div class="lg:col-span-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/WebSkripsi.png" alt="Web Monitoring Kondensasi" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                            <div class="p-4 font-geist">
+                                <h3 class="text-sm font-semibold text-black leading-tight">Web Monitoring Kondensasi</h3>
+                                <p class="text-xs text-black/70 mt-1">Untuk menampilkan data informasi</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/AlatSkripsi.jpeg" class="aspect-video w-full object-cover">
-                        <div class="p-4 font-geist">
-                            <h1 class="text-sm font-semibold text-black leading-tight">Bentuk Alat Sensor</h1>
-                            <p class="text-xs text-black/70 mt-1">ESP32, Sensor DHT22</p>
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/AlatSkripsi.jpeg" alt="Bentuk Alat Sensor" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                            <div class="p-4 font-geist">
+                                <h3 class="text-sm font-semibold text-black leading-tight">Bentuk Alat Sensor</h3>
+                                <p class="text-xs text-black/70 mt-1">ESP32, Sensor DHT22</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/Casing Alat.png" class="aspect-video w-full object-cover">
-                        <div class="p-4 font-geist">
-                            <h1 class="text-sm font-semibold text-black leading-tight">Perencanaan Casing</h1>
-                            <p class="text-xs text-black/70 mt-1">3D Blender</p>
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/Casing Alat.png" alt="Perencanaan Casing" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                            <div class="p-4 font-geist">
+                                <h3 class="text-sm font-semibold text-black leading-tight">Perencanaan Casing</h3>
+                                <p class="text-xs text-black/70 mt-1">3D Blender</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/Rangkaian Skripsi.png" class="aspect-video w-full object-cover">
-                        <div class="p-4 font-geist">
-                            <h1 class="text-sm font-semibold text-black leading-tight">Perencanaan Sambungan</h1>
-                            <p class="text-xs text-black/70 mt-1">Wokwi</p>
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/Rangkaian Skripsi.png" alt="Perencanaan Sambungan" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                            <div class="p-4 font-geist">
+                                <h3 class="text-sm font-semibold text-black leading-tight">Perencanaan Sambungan</h3>
+                                <p class="text-xs text-black/70 mt-1">Wokwi</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/Pengkodean.jpeg" class="aspect-video w-full object-cover">
-                        <div class="p-4 font-geist">
-                            <h1 class="text-sm font-semibold text-black leading-tight">Pengkodean Alat dan Web</h1>
-                            <p class="text-xs text-black/70 mt-1">Arduino, VS Code</p>
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/Pengkodean.jpeg" alt="Pengkodean Alat dan Web" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                            <div class="p-4 font-geist">
+                                <h3 class="text-sm font-semibold text-black leading-tight">Pengkodean Alat dan Web</h3>
+                                <p class="text-xs text-black/70 mt-1">Arduino, VS Code</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
-                        <img src="./assets/img/TestingAlat.jpeg" class="aspect-video w-full object-cover">
-                        <div class="p-4 font-geist">
-                            <h1 class="text-sm font-semibold text-black leading-tight">Pengujian Alat Sensor</h1>
-                            <p class="text-xs text-black/70 mt-1">Ruangan dengan kelembapan</p>
+                        <div class="relative overflow-hidden rounded border border-[#006041] bg-white/15 backdrop-blur-[20px] shadow-lg transition-all duration-300 hover:shadow-xl">
+                            <img src="./assets/img/TestingAlat.jpeg" alt="Pengujian Alat Sensor" width="400" height="225" loading="lazy" decoding="async" class="aspect-video w-full object-cover">
+                            <div class="p-4 font-geist">
+                                <h3 class="text-sm font-semibold text-black leading-tight">Pengujian Alat Sensor</h3>
+                                <p class="text-xs text-black/70 mt-1">Ruangan dengan kelembapan</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer + Modal (sama seperti About/Home) -->
     <footer class="bg-white text-black py-8 sm:py-10 font-geist">
         <div class="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-4 sm:py-6">
             <div class="flex flex-col md:flex-row gap-6 md:gap-0 md:justify-between">
                 <div>
-                    <img src="./assets/img/Icon Kucing Hitam.png" class="w-10 sm:w-12" alt="Logo">
+                    <img src="./assets/img/Icon Kucing Hitam.png" alt="Logo kucing hitam" width="48" height="48" loading="lazy" decoding="async" class="w-10 sm:w-12">
                 </div>
                 <div>
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-none">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight sm:leading-none">
                         Let's talk <br>Hit Me Up!↗
-                    </h1>
-                    <div class="grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 mt-6 sm:mt-8">
+                    </h2>
+                    <nav aria-label="Navigasi footer" class="grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 mt-6 sm:mt-8">
                         <div class="space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg">
                             <a href="./Home.html" class="block hover:translate-x-1 transition">Home</a>
                             <a href="./About.html" class="block hover:translate-x-1 transition">About</a>
@@ -270,26 +287,20 @@
                             <a href="./Contact.html" class="block hover:translate-x-1 transition">Contact</a>
                         </div>
                         <div class="space-y-2 sm:space-y-3 text-sm sm:text-base">
-                            <a href="https://github.com/alfitodia?tab=repositories"
-                                class="flex items-center justify-between w-36 sm:w-40 group">
+                            <a href="https://github.com/alfitodia?tab=repositories" rel="noopener noreferrer" aria-label="GitHub" class="flex items-center justify-between w-36 sm:w-40 group">
                                 <span>Github</span>
-                                <img src="./assets/img/ExternalLinkBlack.png"
-                                    class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
-                            <a href="https://www.instagram.com/alfito_dia/"
-                                class="flex items-center justify-between w-36 sm:w-40 group">
+                            <a href="https://www.instagram.com/alfito_dia/" rel="noopener noreferrer" aria-label="Instagram" class="flex items-center justify-between w-36 sm:w-40 group">
                                 <span>Instagram</span>
-                                <img src="./assets/img/ExternalLinkBlack.png"
-                                    class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
-                            <a href="https://www.tiktok.com/@alfito_dia"
-                                class="flex items-center justify-between w-36 sm:w-40 group">
+                            <a href="https://www.tiktok.com/@alfito_dia" rel="noopener noreferrer" aria-label="TikTok" class="flex items-center justify-between w-36 sm:w-40 group">
                                 <span>TikTok</span>
-                                <img src="./assets/img/ExternalLinkBlack.png"
-                                    class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                                <img src="./assets/img/ExternalLinkBlack.png" alt="" aria-hidden="true" width="16" height="16" loading="lazy" decoding="async" class="w-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
                             </a>
                         </div>
-                    </div>
+                    </nav>
                 </div>
             </div>
 
@@ -303,23 +314,22 @@
         </div>
     </footer>
 
-    <!-- Modal (tidak diubah) -->
-    <div id="videoModal" class="fixed inset-0 z-9999 hidden items-center justify-center">
-        <div id="modal-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+    <div id="videoModal" role="dialog" aria-modal="true" aria-label="Sosial Media" class="fixed inset-0 z-9999 hidden items-center justify-center">
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm" aria-hidden="true"></div>
         <div class="relative z-10 w-[90%] max-w-sm rounded-2xl p-6 text-white font-geist animate-[fadeIn_.3s_ease]"
             style="background: rgba(255,255,255,0.2); border-radius: 16px; box-shadow: 0 4px 30px rgba(0,0,0,0.1); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); border: 1px solid rgba(255,255,255,0.70);">
-            <button id="closeModal" class="absolute top-3 right-4 text-2xl font-bold text-white hover:text-red-300">×</button>
+            <button id="closeModal" type="button" aria-label="Tutup modal" class="absolute top-3 right-4 text-2xl font-bold text-white hover:text-red-300">×</button>
             <div class="text-center">
                 <h2 class="text-3xl font-bold mb-3">Sosial Media</h2>
-                <div class="w-full h-px bg-white/40 mb-6"></div>
+                <div class="w-full h-px bg-white/40 mb-6" aria-hidden="true"></div>
                 <div class="space-y-4">
-                    <a href="https://www.instagram.com/alfito_dia" target="_blank" class="flex items-center justify-center gap-3 hover:opacity-70 transition"><img src="./assets/img/Instagram.png" class="w-7 h-7"><span class="text-lg">: @alfito_dia</span></a>
-                    <a href="https://www.tiktok.com/@alfito_dia" target="_blank" class="flex items-center justify-center gap-3 hover:opacity-70 transition"><img src="./assets/img/Tiktok.png" class="w-7 h-7"><span class="text-lg">: @alfito_dia</span></a>
-                    <a href="https://www.youtube.com/@alfitodia298" target="_blank" class="flex items-center justify-center gap-3 hover:opacity-70 transition"><img src="./assets/img/Youtube.png" class="w-7 h-7"><span class="text-lg">: @alfito_dia</span></a>
+                    <a href="https://www.instagram.com/alfito_dia" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 hover:opacity-70 transition"><img src="./assets/img/Instagram.png" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async" class="w-7 h-7"><span class="text-lg">: @alfito_dia</span></a>
+                    <a href="https://www.tiktok.com/@alfito_dia" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 hover:opacity-70 transition"><img src="./assets/img/Tiktok.png" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async" class="w-7 h-7"><span class="text-lg">: @alfito_dia</span></a>
+                    <a href="https://www.youtube.com/@alfitodia298" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 hover:opacity-70 transition"><img src="./assets/img/Youtube.png" alt="" aria-hidden="true" width="28" height="28" loading="lazy" decoding="async" class="w-7 h-7"><span class="text-lg">: @alfito_dia</span></a>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </body>
 </html>
