@@ -1007,49 +1007,56 @@ liquidElements.forEach((el, index) => {
 const certificateGallery = {
     1: {
         images: [
-            "assets/img/Sertif Rekan.png",
-            "assets/img/TestingAlat.jpeg",
-            "assets/img/Rekan 3.png"
+            "assets/img/KMI EXPO 2025/Sertif Rekan.png",
+            "assets/img/KMI EXPO 2025/1.jpg",
+            "assets/img/KMI EXPO 2025/4.jpg",
+            "assets/img/KMI EXPO 2025/3.jpg",
+            "assets/img/KMI EXPO 2025/6.jpg",
+            "assets/img/KMI EXPO 2025/7.jpg"
         ]
     },
 
     2: {
         images: [
-            "assets/img/SertifKPP.jpg.jpeg",
-            "assets/img/KPP 2.png",
-            "assets/img/KPP 3.png"
+            "assets/img/KPP MINING/SertifKPP.jpg.jpeg",
+            "assets/img/KPP MINING/1.jpg",
+            "assets/img/KPP MINING/2.jpg",
+            "assets/img/KPP MINING/3.jpg",
+            "assets/img/KPP MINING/4.jpg",
+            "assets/img/KPP MINING/6.jpg",
+            "assets/img/KPP MINING/7.jpg"
         ]
     },
 
     3: {
         images: [
-            "assets/img/SertifStand.png",
-            "assets/img/Stand 2.png",
-            "assets/img/Stand 3.png"
+            "assets/img/KMI EXPO 2025/SertifStand.png",
+            "assets/img/KMI EXPO 2025/2.jpg",
+            "assets/img/KMI EXPO 2025/5.jpg"
         ]
     },
 
     4: {
         images: [
-            "assets/img/Amli.png",
-            "assets/img/Amli 2.png",
-            "assets/img/Amli 3.png"
+            "assets/img/PKM AMLI/Amli.png",
+            "assets/img/PKM AMLI/1.jpg",
+            "assets/img/PKM AMLI/2.jpg",
+            "assets/img/PKM AMLI/3.jpg",
+            "assets/img/PKM AMLI/4.jpg",
+            "assets/img/PKM AMLI/5.jpg",
+            "assets/img/PKM AMLI/6.jpg"
         ]
     },
 
     5: {
         images: [
-            "assets/img/SertifJuri.jpg.jpeg",
-            "assets/img/Juri 2.png",
-            "assets/img/Juri 3.png"
+            "assets/img/SertifJuri.jpg.jpeg"
         ]
     },
 
     6: {
         images: [
-            "assets/img/SertifIDE3.jpeg",
-            "assets/img/IDE 2.png",
-            "assets/img/IDE 3.png"
+            "assets/img/SertifIDE3.jpeg"
         ]
     }
 

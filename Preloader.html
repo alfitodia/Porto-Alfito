@@ -8,27 +8,22 @@
     <title>Memuat Halaman — Alfito Deanova</title>
     <meta name="description" content="Menyiapkan halaman portfolio Alfito Deanova Issac Alfarros.">
 
-    <!-- Preloader bersifat sementara — jangan diindeks agar tidak bentrok dengan Home -->
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://alfitodia.github.io/portfolio/Home.html">
 
-    <!-- Hint: prefetch halaman tujuan supaya transisi langsung -->
     <link rel="prefetch" href="./Home.html" as="document">
     <link rel="preconnect" href="https://api.github.com" crossorigin>
 
-    <!-- Hint: gambar latar preloader sebagai LCP -->
     <link rel="preload" as="image" href="./assets/img/Awan Kiri.png" fetchpriority="high">
     <link rel="preload" as="image" href="./assets/img/Awan Kanan.png" fetchpriority="high">
 
     <link rel="icon" type="image/png" href="./public/img/logo.png">
     <link rel="stylesheet" href="./src/output.css">
 
-    <!-- Fallback: bila JavaScript tidak aktif, langsung ke Home -->
     <noscript>
         <meta http-equiv="refresh" content="0; url=./Home.html">
     </noscript>
 
-    <!-- Preloader-specific: reduced-motion + progress transition -->
     <style>
         #loading-progress {
             transition: width 120ms linear;
@@ -37,7 +32,6 @@
             #loading-progress {
                 transition: none !important;
             }
-            /* Hindari animasi apa pun (mis. kupu-kupu melayang via class animate-*) */
             *,
             *::before,
             *::after {
@@ -50,7 +44,6 @@
 </head>
 
 <body class="m-0 p-0 overflow-hidden">
-    <!-- Fallback aksesibilitas jika JS mati tapi <noscript> di head terlewat -->
     <noscript>
         <p style="text-align:center;padding:1rem;font-family:sans-serif;">
             <a href="./Home.html">Lanjut ke Home →</a>
@@ -61,9 +54,8 @@
         aria-label="Memuat halaman portfolio"
         class="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#F6F2EB]">
 
-        <!-- Dekorasi: clouds — mengecil di mobile agar tidak menutupi teks -->
         <img
-            src="./assets/img/Awan Kiri.png"
+            src="./assets/img/icon/Awan Kiri.png"
             alt=""
             aria-hidden="true"
             width="220" height="120"
@@ -71,7 +63,7 @@
             fetchpriority="high"
             class="pointer-events-none absolute left-0 top-[7%] w-20 sm:w-32 md:w-40 lg:w-55 select-none">
         <img
-            src="./assets/img/Awan Kanan.png"
+            src="./assets/img/icon/Awan Kanan.png"
             alt=""
             aria-hidden="true"
             width="220" height="120"
@@ -79,32 +71,29 @@
             fetchpriority="high"
             class="pointer-events-none absolute right-0 top-[7%] w-20 sm:w-32 md:w-40 lg:w-55 select-none">
         <img
-            src="./assets/img/Rumput Kiri.png"
+            src="./assets/img/icon/Rumput Kiri.png"
             alt=""
             aria-hidden="true"
             width="180" height="140"
             decoding="async"
             class="pointer-events-none absolute bottom-0 left-0 w-16 sm:w-24 md:w-32 lg:w-45 select-none">
         <img
-            src="./assets/img/Rumput Kanan.png"
+            src="./assets/img/icon/Rumput Kanan.png"
             alt=""
             aria-hidden="true"
             width="180" height="140"
             decoding="async"
             class="pointer-events-none absolute bottom-0 right-0 w-16 sm:w-24 md:w-32 lg:w-45 select-none">
 
-        <!-- Konten tengah: px-4 sebagai safety margin di mobile -->
         <div class="relative z-10 flex flex-col items-center px-4">
             <div class="relative">
-                <!-- Kupu-kupu: ukuran & offset menyesuaikan ukuran teks -->
                 <img
-                    src="./assets/img/Kupu Kupu.png"
+                    src="./assets/img/icon/Kupu Kupu.png"
                     alt=""
                     aria-hidden="true"
                     width="60" height="60"
                     decoding="async"
                     class="pointer-events-none absolute -left-4 top-1 z-10 w-8 sm:-left-6 sm:w-10 md:-left-7 md:w-12 lg:-left-8 lg:w-15 select-none">
-                <!-- Welcome: clamp() agar responsif, 200px tetap di desktop ≥ 1111px -->
                 <h1 class="font-flatlion text-[clamp(64px,18vw,200px)] leading-none tracking-wide text-[#00604A] text-center">
                     Welcome
                 </h1>
