@@ -26,33 +26,116 @@ if (openModal && closeModal && modal) {
 
 }
 
-
-// ================= WEATHER =================
-
-function loadWeather() {
-
+// ================= WEATHER (WEATHERAPI) =================
+async function loadWeather() {
     const weatherElement = document.getElementById("weather");
 
     if (!weatherElement) return;
 
-    fetch("https://wttr.in/Malang?format=j1")
-        .then(response => response.json())
-        .then(data => {
+    const API_KEY = "c4f928ad388743b39dd62950260311";
 
-            const temp = data.current_condition[0].temp_C;
-            const weather = data.current_condition[0].weatherDesc[0].value;
+    try {
+        weatherElement.textContent = "🌤️ Memuat cuaca...";
 
-            weatherElement.textContent =
-                `Cuaca di Malang: ${weather} (${temp}°C)`;
+        const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=Malang&lang=id`;
 
-        })
-        .catch(() => {
+        const response = await fetch(url);
 
-            weatherElement.textContent =
-                "Cuaca tidak tersedia";
+        if (!response.ok) {
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
 
-        });
+        const data = await response.json();
 
+        const suhu = Math.round(data.current.temp_c);
+        const kelembapan = data.current.humidity;
+        const kodeCuaca = data.current.condition.code;
+        const siang = data.current.is_day === 1;
+
+        const terjemahanCuaca = {
+            1000: "Cerah",
+            1003: "Cerah berawan",
+            1006: "Berawan",
+            1009: "Mendung",
+            1030: "Berkabut",
+            1063: "Hujan lokal",
+            1066: "Salju lokal",
+            1069: "Hujan es lokal",
+            1072: "Gerimis beku lokal",
+            1087: "Hujan petir",
+            1114: "Badai salju",
+            1117: "Badai salju lebat",
+            1135: "Kabut",
+            1147: "Kabut beku",
+            1150: "Gerimis ringan lokal",
+            1153: "Gerimis ringan",
+            1168: "Gerimis beku",
+            1171: "Gerimis beku lebat",
+            1180: "Hujan ringan lokal",
+            1183: "Hujan ringan",
+            1186: "Hujan sedang lokal",
+            1189: "Hujan sedang",
+            1192: "Hujan lebat lokal",
+            1195: "Hujan lebat",
+            1198: "Hujan beku ringan",
+            1201: "Hujan beku lebat",
+            1204: "Hujan es ringan",
+            1207: "Hujan es lebat",
+            1210: "Salju ringan",
+            1213: "Salju ringan",
+            1216: "Salju sedang",
+            1219: "Salju sedang",
+            1222: "Salju lebat",
+            1225: "Salju lebat",
+            1237: "Hujan es",
+            1240: "Hujan lokal ringan",
+            1243: "Hujan lokal sedang",
+            1246: "Hujan lokal lebat",
+            1249: "Hujan es lokal ringan",
+            1252: "Hujan es lokal lebat",
+            1255: "Salju lokal ringan",
+            1258: "Salju lokal lebat",
+            1261: "Hujan es ringan",
+            1264: "Hujan es lebat",
+            1273: "Hujan petir lokal",
+            1276: "Hujan petir disertai hujan lebat",
+            1279: "Hujan salju disertai petir",
+            1282: "Hujan salju lebat disertai petir"
+        };
+
+        const kondisi =
+            terjemahanCuaca[kodeCuaca] ||
+            data.current.condition.text;
+
+        let ikonCuaca = "🌤️";
+
+        if (kodeCuaca === 1000) {
+            ikonCuaca = siang ? "☀️" : "🌙";
+        } else if (kodeCuaca === 1003) {
+            ikonCuaca = siang ? "🌤️" : "☁️";
+        } else if ([1006, 1009].includes(kodeCuaca)) {
+            ikonCuaca = "☁️";
+        } else if ([1030, 1135, 1147].includes(kodeCuaca)) {
+            ikonCuaca = "🌫️";
+        } else if ([1063, 1072, 1150, 1153, 1168, 1171, 1180, 1183, 1240, 1249, 1252].includes(kodeCuaca)) {
+            ikonCuaca = "🌦️";
+        } else if ([1186, 1189, 1192, 1195, 1198, 1201, 1243, 1246].includes(kodeCuaca)) {
+            ikonCuaca = "🌧️";
+        } else if ([1087, 1273, 1276, 1279, 1282].includes(kodeCuaca)) {
+            ikonCuaca = "⛈️";
+        } else if ([1066, 1114, 1117, 1210, 1213, 1216, 1219, 1222, 1225, 1255, 1258].includes(kodeCuaca)) {
+            ikonCuaca = "❄️";
+        } else if ([1069, 1204, 1207, 1237, 1261, 1264].includes(kodeCuaca)) {
+            ikonCuaca = "🌨️";
+        }
+        
+        weatherElement.textContent =
+            `Cuaca Malang: ${ikonCuaca} ${kondisi} (${suhu}°C) | Kelembapan: ${kelembapan}%`;
+
+    } catch (error) {
+        console.error("Gagal memuat cuaca:", error);
+        weatherElement.textContent = "🌥️ Cuaca tidak tersedia";
+    }
 }
 
 loadWeather();
@@ -426,7 +509,7 @@ reveals.forEach(el => observer.observe(el));
         "preloader-frame";
 
     preloaderFrame.src =
-        "./preloader.html";
+        "./Preloader.html";
 
     preloaderFrame.className = `
         fixed
@@ -1007,43 +1090,43 @@ liquidElements.forEach((el, index) => {
 const certificateGallery = {
     1: {
         images: [
-            "assets/img/KMI EXPO 2025/Sertif Rekan.png",
-            "assets/img/KMI EXPO 2025/1.jpg",
-            "assets/img/KMI EXPO 2025/4.jpg",
-            "assets/img/KMI EXPO 2025/3.jpg",
-            "assets/img/KMI EXPO 2025/6.jpg",
-            "assets/img/KMI EXPO 2025/7.jpg"
+            "assets/img/KMI Expo 2025/Sertif Rekan.png",
+            "assets/img/KMI Expo 2025/1.jpg",
+            "assets/img/KMI Expo 2025/4.jpg",
+            "assets/img/KMI Expo 2025/3.JPG",
+            "assets/img/KMI Expo 2025/6.jpg",
+            "assets/img/KMI Expo 2025/7.jpg"
         ]
     },
 
     2: {
         images: [
-            "assets/img/KPP MINING/SertifKPP.jpg.jpeg",
-            "assets/img/KPP MINING/1.jpg",
-            "assets/img/KPP MINING/2.jpg",
-            "assets/img/KPP MINING/3.jpg",
-            "assets/img/KPP MINING/4.jpg",
-            "assets/img/KPP MINING/6.jpg",
-            "assets/img/KPP MINING/7.jpg"
+            "assets/img/KPP Mining/SertifKPP.jpg.jpeg",
+            "assets/img/KPP Mining/1.jpg",
+            "assets/img/KPP Mining/2.jpg",
+            "assets/img/KPP Mining/3.jpg",
+            "assets/img/KPP Mining/4.jpg",
+            "assets/img/KPP Mining/6.jpg",
+            "assets/img/KPP Mining/7.jpg"
         ]
     },
 
     3: {
         images: [
-            "assets/img/KMI EXPO 2025/SertifStand.png",
-            "assets/img/KMI EXPO 2025/2.jpg",
-            "assets/img/KMI EXPO 2025/5.jpg"
+            "assets/img/KMI Expo 2025/SertifStand.png",
+            "assets/img/KMI Expo 2025/2.JPG",
+            "assets/img/KMI Expo 2025/5.jpg"
         ]
     },
 
     4: {
         images: [
             "assets/img/PKM AMLI/Amli.png",
-            "assets/img/PKM AMLI/1.jpg",
-            "assets/img/PKM AMLI/2.jpg",
-            "assets/img/PKM AMLI/3.jpg",
-            "assets/img/PKM AMLI/4.jpg",
-            "assets/img/PKM AMLI/5.jpg",
+            "assets/img/PKM AMLI/1.JPG",
+            "assets/img/PKM AMLI/2.JPG",
+            "assets/img/PKM AMLI/3.JPG",
+            "assets/img/PKM AMLI/4.JPG",
+            "assets/img/PKM AMLI/5.JPG",
             "assets/img/PKM AMLI/6.jpg"
         ]
     },
@@ -1056,7 +1139,7 @@ const certificateGallery = {
 
     6: {
         images: [
-            "assets/img/SertifIDE3.jpeg"
+            "assets/img/Sentosa Foundation/SertifIDE3.jpeg"
         ]
     }
 
@@ -1081,119 +1164,125 @@ const certificateThumbnails =
 const viewCertificateButtons =
     document.querySelectorAll(".view-certificate");
 
-// ================= BUKA MODAL =================
-viewCertificateButtons.forEach(button => {
-    button.addEventListener("click", () => {
-        const certificateId =
-            button.dataset.certificate;
-        const certificate =
-            certificateGallery[certificateId];
+if (
+    certificateModal &&
+    certificateBackdrop &&
+    closeCertificateModal &&
+    certificateMainImage &&
+    certificateThumbnails
+) {
 
-        if (!certificate) return;
+    // ================= BUKA MODAL =================
+    viewCertificateButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const certificateId =
+                button.dataset.certificate;
 
-        certificateMainImage.src =
-            certificate.images[0];
+            const certificate =
+                certificateGallery[certificateId];
 
-        certificateThumbnails.innerHTML = "";
+            if (!certificate) return;
 
-        certificate.images.forEach((image, index) => {
-            const thumbnail =
-                document.createElement("button");
+            certificateMainImage.src =
+                certificate.images[0];
 
-            thumbnail.type = "button";
+            certificateThumbnails.innerHTML = "";
 
-            thumbnail.className = `
-                w-20 h-20
-                md:w-24 md:h-24
-                flex-shrink-0
-                rounded-lg
-                overflow-hidden
-                border-2
-                border-white/70
-                bg-white
-                hover:scale-105
-                transition-all
-                duration-300
-            `;
-            thumbnail.innerHTML = `
-                <img
-                    src="${image}"
-                    class="w-full h-full object-cover"
-                    alt="Certificate ${index + 1}">
-            `;
+            certificate.images.forEach((image, index) => {
+                const thumbnail =
+                    document.createElement("button");
+                thumbnail.type = "button";
 
-            thumbnail.addEventListener("click", () => {
-                certificateMainImage.src = image;
+                thumbnail.className = `
+                    w-20 h-20
+                    md:w-24 md:h-24
+                    flex-shrink-0
+                    shrink-0
+                    rounded-lg
+                    overflow-hidden
+                    border-2
+                    border-white/70
+                    bg-white
+                    hover:scale-105
+                    transition-all
+                    duration-300
+                `;
 
-                document
-                    .querySelectorAll(
-                        "#certificateThumbnails button"
-                    )
-                    .forEach(btn => {
-                        btn.classList.remove(
-                            "border-[#006041]",
-                            "scale-105"
-                        );
-                        btn.classList.add(
-                            "border-white/70"
-                        );
-                    });
-                thumbnail.classList.remove(
-                    "border-white/70"
-                );
-                thumbnail.classList.add(
-                    "border-[#006041]",
-                    "scale-105"
-                );
+                thumbnail.innerHTML = `
+                    <img
+                        src="${image}"
+                        class="w-full h-full object-cover"
+                        alt="Certificate ${index + 1}">
+                `;
+
+                thumbnail.addEventListener("click", () => {
+                    certificateMainImage.src = image;
+
+                    certificateThumbnails
+                        .querySelectorAll("button")
+                        .forEach(btn => {
+                            btn.classList.remove(
+                                "border-[#006041]",
+                                "scale-105"
+                            );
+                            btn.classList.add(
+                                "border-white/70"
+                            );
+                        });
+
+                    thumbnail.classList.remove(
+                        "border-white/70"
+                    );
+
+                    thumbnail.classList.add(
+                        "border-[#006041]",
+                        "scale-105"
+                    );
+                });
+
+                if (index === 0) {
+                    thumbnail.classList.remove(
+                        "border-white/70"
+                    );
+                    thumbnail.classList.add(
+                        "border-[#006041]",
+                        "scale-105"
+                    );
+                }
+                certificateThumbnails.appendChild(thumbnail);
             });
+            
+            certificateThumbnails.scrollLeft = 0;
 
-            if (index === 0) {
-                thumbnail.classList.remove(
-                    "border-white/70"
-                );
-                thumbnail.classList.add(
-                    "border-[#006041]",
-                    "scale-105"
-                );
-            }
-            certificateThumbnails.appendChild(
-                thumbnail
-            );
+            certificateModal.classList.remove("hidden");
+            certificateModal.classList.add("flex");
+
+            document.body.classList.add("overflow-hidden");
         });
-
-        certificateModal.classList.remove("hidden");
-
-        certificateModal.classList.add("flex");
-
-        document.body.classList.add(
-            "overflow-hidden"
-        );
     });
 
-});
+    // ================= TUTUP MODAL =================
+    function closeCertificateGallery() {
+        certificateModal.classList.add("hidden");
+        certificateModal.classList.remove("flex");
 
-function closeCertificateGallery() {
-    certificateModal.classList.add("hidden");
-    certificateModal.classList.remove("flex");
-
-    document.body.classList.remove(
-        "overflow-hidden"
-    );
-}
-
-closeCertificateModal.addEventListener(
-    "click",
-    closeCertificateGallery
-);
-
-certificateBackdrop.addEventListener(
-    "click",
-    closeCertificateGallery
-);
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeCertificateGallery();
-
+        document.body.classList.remove("overflow-hidden");
     }
-});
+
+    closeCertificateModal.addEventListener(
+        "click",
+        closeCertificateGallery
+    );
+
+    certificateBackdrop.addEventListener(
+        "click",
+        closeCertificateGallery
+    );
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+            closeCertificateGallery();
+        }
+    });
+}
