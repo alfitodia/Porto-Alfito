@@ -1286,3 +1286,151 @@ if (
         }
     });
 }
+
+// ================= CONTACT FORM NOTIFICATION =================
+const contactForm = document.getElementById("contact-form");
+const contactModal = document.getElementById("contact-modal");
+const closeContactModal = document.getElementById("close-contact-modal");
+
+const submitButton = document.getElementById("submit-contact");
+const submitText = document.getElementById("submit-text");
+
+const modalTitle = document.getElementById("contact-modal-title");
+const modalMessage = document.getElementById("contact-modal-message");
+
+const successIcon = document.getElementById("contact-success-icon");
+const errorIcon = document.getElementById("contact-error-icon");
+
+function showContactModal(success, message) {
+
+    if (!contactModal) return;
+
+    if (success) {
+
+        modalTitle.textContent = "Pesan Berhasil Dikirim!";
+        modalTitle.classList.remove("text-red-700");
+        modalTitle.classList.add("text-[#006041]");
+
+        successIcon.classList.remove("hidden");
+        errorIcon.classList.add("hidden");
+
+    } else {
+
+        modalTitle.textContent = "Pesan Gagal Dikirim";
+
+        modalTitle.classList.remove("text-[#006041]");
+        modalTitle.classList.add("text-red-700");
+
+        successIcon.classList.add("hidden");
+        errorIcon.classList.remove("hidden");
+
+    }
+
+    modalMessage.textContent = message;
+
+    contactModal.classList.remove("hidden");
+    contactModal.classList.add("flex");
+
+    document.body.classList.add("overflow-hidden");
+
+    closeContactModal.focus();
+}
+
+function hideContactModal() {
+
+    if (!contactModal) return;
+
+    contactModal.classList.add("hidden");
+    contactModal.classList.remove("flex");
+
+    document.body.classList.remove("overflow-hidden");
+
+}
+
+if (closeContactModal && contactModal) {
+
+    closeContactModal.addEventListener("click", hideContactModal);
+
+    // Klik area luar modal
+    contactModal.addEventListener("click", (event) => {
+
+        if (event.target === contactModal) {
+            hideContactModal();
+        }
+
+    });
+
+    // Tutup menggunakan tombol Escape
+    document.addEventListener("keydown", (event) => {
+
+        if (
+            event.key === "Escape" &&
+            !contactModal.classList.contains("hidden")
+        ) {
+            hideContactModal();
+        }
+
+    });
+
+}
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+        if (!contactForm.reportValidity()) return;
+
+        const originalText = "Kirim Pesan";
+
+        submitButton.disabled = true;
+        submitText.textContent = "Mengirim...";
+
+        try {
+
+            const formData = new FormData(contactForm);
+
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            });
+
+            const result = await response.json();
+
+            if (!response.ok || result.success !== "true") {
+                throw new Error(
+                    result.message || "Pesan tidak berhasil dikirim."
+                );
+            }
+
+            contactForm.reset();
+
+            showContactModal(
+                true,
+                "Terima kasih telah menghubungi saya. Pesan kamu berhasil dikirim dan akan segera saya baca."
+            );
+
+        } catch (error) {
+
+            console.error("Gagal mengirim pesan:", error);
+
+            showContactModal(
+                false,
+                "Maaf, pesan kamu belum berhasil dikirim. Silakan coba beberapa saat lagi."
+            );
+
+        } finally {
+
+            submitButton.disabled = false;
+            submitText.textContent = originalText;
+
+        }
+
+    });
+
+}
+

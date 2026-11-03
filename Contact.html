@@ -269,7 +269,9 @@
                             </div>
                         </div>
 
-                        <form action="https://formsubmit.co/kabmalim@gmail.com"
+                        <form
+                            id="contact-form"
+                            action="https://formsubmit.co/ajax/kabmalim@gmail.com"
                             method="POST"
                             class="flex flex-col flex-1">
 
@@ -307,7 +309,9 @@
                                 transition-all"></textarea>
 
                             <!-- Tombol kirim -->
-                            <button type="submit"
+                            <button
+                                id="submit-contact"
+                                type="submit"
                                 class="group mt-4 sm:mt-5 w-full h-14 sm:h-16
                                 flex items-center justify-center gap-4 rounded-2xl
                                 border border-[#006041] bg-white/15 backdrop-blur-[20px]
@@ -316,8 +320,10 @@
                                 transition-all duration-300
                                 hover:bg-[#006041]
                                 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.6),inset_0_-1px_0_rgba(255,255,255,0.15),inset_0_0_25px_10px_rgba(255,255,255,0.12)]
-                                hover:scale-[1.02] hover:text-white">
-                                Kirim Pesan
+                                hover:scale-[1.02] hover:text-white
+                                disabled:opacity-60 disabled:cursor-not-allowed">
+
+                                <span id="submit-text">Kirim Pesan</span>
                             </button>
                         </form>
                     </div>
@@ -325,6 +331,86 @@
             </div>
         </section>
     </main>
+
+    <!-- ================= CONTACT NOTIFICATION MODAL ================= -->
+    <div
+        id="contact-modal"
+        class="fixed inset-0 z-99999 hidden items-center justify-center
+        bg-black/50 backdrop-blur-sm px-5 font-geist"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="contact-modal-title">
+
+        <div
+            class="relative w-full max-w-md overflow-hidden rounded-3xl
+            border border-[#006041]/20 bg-[#F6F2EB] p-8 sm:p-10
+            text-center shadow-2xl">
+
+            <!-- Icon -->
+            <div
+                id="contact-modal-icon"
+                class="mx-auto mb-5 flex h-20 w-20 items-center
+                justify-center rounded-full bg-[#006041]/10">
+
+                <svg
+                    id="contact-success-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#006041"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <path d="M20 6 9 17l-5-5"/>
+                </svg>
+
+                <svg
+                    id="contact-error-icon"
+                    class="hidden"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#B42318"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="m15 9-6 6"/>
+                    <path d="m9 9 6 6"/>
+                </svg>
+            </div>
+
+            <h2
+                id="contact-modal-title"
+                class="mb-3 text-2xl sm:text-3xl font-bold text-[#006041]">
+                Pesan Berhasil Dikirim!
+            </h2>
+
+            <p
+                id="contact-modal-message"
+                class="mb-7 text-sm sm:text-base leading-relaxed text-gray-600">
+                Terima kasih telah menghubungi saya.
+                Pesan kamu berhasil dikirim!!!
+            </p>
+
+            <button
+                id="close-contact-modal"
+                type="button"
+                class="w-full rounded-xl border border-[#006041]
+                bg-[#006041] px-6 py-3.5 font-semibold text-white
+                transition-all duration-300 hover:bg-transparent
+                hover:text-[#006041]">
+
+                Mengerti
+            </button>
+        </div>
+    </div>
 
     <footer class="bg-white text-black py-8 sm:py-10 font-geist">
         <div class="max-w-7xl mx-auto px-5 sm:px-10 lg:px-14 py-4 sm:py-6">
